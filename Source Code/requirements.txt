@@ -1,0 +1,6 @@
+openai-whisper
+torch
+google-genai
+anthropic
+pandas
+python-dotenv
