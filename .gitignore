@@ -1,0 +1,41 @@
+# Python virtual environments
+medical-stt-whisper-gemini/
+venv/
+.venv/
+env/
+ENV/
+**/Lib/site-packages/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment variables (sensitive!)
+.env
+*.env
+
+# Audio files (large)
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.ogg
+*.aac
+
+# Whisper model cache
+*.pt
+*.bin
+
+# Cached transcription segments
+*_segments.json
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/

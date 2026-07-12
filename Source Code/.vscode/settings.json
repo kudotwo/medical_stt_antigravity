@@ -1,0 +1,12 @@
+{
+    "python.defaultInterpreterPath": "D:\\Users\\justi\\OneDrive\\Documents\\Binus aso\\Antigravity Medical STT\\Source Code\\medical-stt-whisper\\Scripts\\python.exe",
+    "python.terminal.activateEnvironment": true,
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.venvPath": "D:\\Users\\justi\\OneDrive\\Documents\\Binus aso\\Antigravity Medical STT\\Source Code",
+    "python.venvFolders": [
+        "medical-stt-whisper"
+    ],
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    }
+}

@@ -1,0 +1,110 @@
+[0.0s->8.9s] Doctor: brought you in today?
+[0.0s->8.9s] Patient: Sure, I'm just having a lot of chest pain and so I thought I should get it
+[8.9s->23.4s] Doctor: checked out. Okay and before we start could you remind me of your gender and age?
+[8.9s->23.4s] Patient: Sure, 39, I'm a male.
+[23.7s->36.2s] Doctor: Okay and so when did this chest pain start?
+[23.7s->36.2s] Patient: It started last night but it's becoming sharper.
+[36.2s->51.5s] Doctor: Okay and where is this pain located?
+[36.2s->51.5s] Patient: It's located on the left side of my chest. Okay and so how long
+[51.5s->59.5s] Patient: has it been going on for than if it started last night? So I guess it would be a couple hours now,
+[59.5s->72.7s] Doctor: maybe like eight. Okay has it been constant throughout that time or changing?
+[59.5s->72.7s] Patient: I would say
+[73.1s->82.0s] Patient: it's been pretty constant, yeah.
+[73.1s->82.0s] Doctor: Okay and how would you describe the pain? People will use
+[82.0s->91.9s] Doctor: words sometimes like sharp, burning, achy.
+[82.0s->91.9s] Patient: I'd say it's pretty sharp, yeah.
+[82.0s->91.9s] Doctor: Sharp, okay. Anything
+[91.9s->101.8s] Doctor: that you have tried since last night that's made the pain better?
+[91.9s->101.8s] Patient: Not laying down helps.
+[103.5s->114.0s] Doctor: Okay so do you find laying down makes the pain worse?
+[103.5s->114.0s] Patient: Yes, definitely.
+[103.5s->114.0s] Doctor: Okay do you find that the
+[114.0s->124.8s] Doctor: pain is radiating anywhere?
+[114.0s->124.8s] Patient: No.
+[114.0s->124.8s] Doctor: Okay and is there anything else that makes the pain worse besides
+[125.6s->134.9s] Patient: laying down? Not that I've noticed, no.
+[125.6s->134.9s] Doctor: Okay so not like taking a deep breath or anything like that?
+[136.0s->142.6s] Patient: Maybe taking a deep breath, yeah.
+[136.0s->142.6s] Doctor: Okay and when the pain started could you
+[144.8s->148.0s] Doctor: tell me, could you think of anything that you were doing at the time?
+[148.8s->158.1s] Patient: I mean I was moving some furniture around but that I've done that before.
+[148.8s->158.1s] Doctor: Okay so you didn't feel
+[159.0s->170.8s] Doctor: like you hurt yourself when you were doing that?
+[159.0s->170.8s] Patient: No.
+[159.0s->170.8s] Doctor: Okay and in regards to how severe the pain is
+[171.2s->176.3s] Doctor: in regards to how severe the pain is on a scale of one to ten, ten being the
+[177.5s->184.1s] Doctor: worst pain you've ever felt, how severe would you say the pain is?
+[177.5s->184.1s] Patient: I'd say it's like a seven or eight.
+[184.1s->191.8s] Doctor: It's pretty bad. Okay and with the pain do you have any other associated symptoms?
+[193.5s->198.2s] Patient: I feel a little light-headed and I'm having some trouble breathing.
+[198.6s->214.8s] Doctor: Okay have you had any loss of consciousness?
+[198.6s->214.8s] Patient: No.
+[198.6s->214.8s] Doctor: Okay have you been experiencing any
+[215.6s->229.9s] Doctor: like racing of the heart?
+[215.6s->229.9s] Patient: A little bit, yeah.
+[215.6s->229.9s] Doctor: Okay and have you been sweaty at all?
+[232.5s->239.0s] Patient: Just from the short, just from having issues breathing.
+[232.5s->239.0s] Doctor: Okay have you been having issues
+[239.1s->252.3s] Doctor: breathing since the pain started?
+[239.1s->252.3s] Patient: Yes.
+[239.1s->252.3s] Doctor: Okay and recently have you had any periods of time where
+[252.3s->263.7s] Doctor: you like have been immobilized or you haven't been like able to move around a lot?
+[252.3s->263.7s] Patient: No, no.
+[252.3s->263.7s] Doctor: Okay
+[264.6s->274.4s] Doctor: and have you been feeling sick at all, any infectious symptoms?
+[264.6s->274.4s] Patient: No.
+[264.6s->274.4s] Doctor: Okay have you had
+[274.4s->287.7s] Doctor: any nausea or vomiting? No. Any fevers or chills? No. Okay how about any abdominal pain? No. Any
+[288.4s->301.6s] Doctor: urinary problems? No. Or bowel problems? Okay have you had a cough? No. Okay you haven't brought up
+[301.6s->312.1s] Doctor: any blood? No. Okay have you had a wheeze with your difficulty breathing? No, not that I've heard.
+[312.8s->319.2s] Doctor: Okay any changes to the like breath sounds at all like any noisy breathing?
+[320.3s->329.1s] Patient: No, well I guess if when I'm really having trouble breathing yeah.
+[320.3s->329.1s] Doctor: Okay has anything like this ever
+[329.1s->342.7s] Doctor: happened to you before? No. No okay and have you have you had any night sweats? No. All right and
+[342.7s->352.2s] Doctor: then how about any rashes or skin changes?
+[342.7s->352.2s] Patient: No rashes but I guess like my neck seems to be a little
+[352.2s->364.0s] Doctor: swollen. Okay do you have any neck pain? No. Okay have you had any like accidents like a like a car
+[364.0s->376.0s] Doctor: accident or anything where you really jerked your neck? No. Okay any any trauma at all to the chest
+[376.0s->387.9s] Doctor: or or back? No. Okay so just in regards to past medical history do you have any prior medical
+[387.9s->402.4s] Doctor: conditions? No. Okay any recent hospitalizations? No. Okay any prior surgeries? No. Okay do you
+[402.4s->410.8s] Doctor: take any medications regularly? Are they prescribed or over the counter? No. All right how about any
+[410.8s->420.0s] Doctor: allergies to medications? None. All right any immunizations or are they up to date?
+[410.8s->420.0s] Patient: They're all
+[420.0s->430.1s] Doctor: up to date. Excellent all right and could you tell me a little bit about your living situation
+[430.1s->435.8s] Patient: currently? Sure I live in an apartment by myself.
+[440.8s->450.8s] Patient: Yep that's about it.
+[440.8s->450.8s] Doctor: Okay and how do you support yourself financially?
+[440.8s->450.8s] Patient: I'm an accountant.
+[451.3s->463.5s] Doctor: Okay sounds like a pretty stressful job or that it can be. Do you smoke cigarettes?
+[451.3s->463.5s] Patient: I do.
+[451.3s->463.5s] Doctor: Okay and how
+[463.5s->474.5s] Doctor: much do you smoke?
+[463.5s->474.5s] Patient: I smoke about a pack a day.
+[463.5s->474.5s] Doctor: Okay how long have you been smoking for?
+[463.5s->474.5s] Patient: For the past 10 to 15 years.
+[474.5s->485.8s] Doctor: Okay and do you smoke cannabis? Sometimes. How much marijuana would you smoke
+[487.2s->498.1s] Doctor: per week? Per week? Maybe about five milligrams not that much. Okay and do you use any other
+[498.1s->508.0s] Doctor: recreational drugs like cocaine, crystal meth, opioids? No. Okay have you used IV drugs before?
+[508.7s->522.8s] Patient: No.
+[508.7s->522.8s] Doctor: Okay and do you drink alcohol?
+[508.7s->522.8s] Patient: I do.
+[508.7s->522.8s] Doctor: Okay how much alcohol do you drink each week?
+[523.5s->534.0s] Patient: About I'd say I have like one or two drinks a day so about 10 drinks a week.
+[523.5s->534.0s] Doctor: Okay and
+[536.8s->544.6s] Doctor: then briefly could you tell me a little bit about your like diet and exercise?
+[536.8s->544.6s] Patient: Sure I try to
+[545.5s->554.8s] Patient: eat healthy for dinner at least but most of my lunches are I eat out and then in terms of
+[554.8s->563.2s] Patient: exercise I try to exercise every other day. I run for about half an hour.
+[554.8s->563.2s] Doctor: Okay oh that's great that
+[563.2s->572.5s] Doctor: you've been working on the activity and the diets as well. So has anything like this happened in
+[572.5s->578.8s] Doctor: your family before?
+[572.5s->578.8s] Patient: No.
+[572.5s->578.8s] Doctor: Okay has anybody in the family had a heart attack before?
+[580.4s->589.1s] Patient: Um actually yes my father had a heart attack when he was 45.
+[580.4s->589.1s] Doctor: Okay and anybody in the family have
+[589.8s->599.6s] Doctor: uh cholesterol problems?
+[589.8s->599.6s] Patient: I think my father did.
+[589.8s->599.6s] Doctor: I see okay and how about anybody in the family have
+[600.0s->610.8s] Doctor: stroke? No strokes. Okay and then any cancers in the family? No. Okay um
+[612.2s->619.2s] Doctor: was there anything else that you wanted to um tell me about today that that I on on history?
+[620.6s->625.5s] Patient: Uh no I don't think so I think you asked me everything.
