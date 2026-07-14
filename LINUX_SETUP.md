@@ -15,21 +15,35 @@ cd medical_stt_antigravity
 
 ## Step 2 — Install System Dependencies
 
+> **For CachyOS / Arch-based distros:**
+
 ```bash
-sudo apt update
-sudo apt install python3 python3-pip python3-venv ffmpeg -y
+sudo pacman -Syu python python-pip ffmpeg --noconfirm
 ```
 
 > `ffmpeg` is required by Whisper to process audio files.
+> Python and pip are often pre-installed on CachyOS — skip any already installed packages.
 
 ---
 
 ## Step 3 — Create a Virtual Environment
 
 ```bash
-python3 -m venv venv
-source venv/bin/activate
+python -m venv medical-stt-env
 ```
+
+Then activate it depending on your shell:
+
+```bash
+# If using bash or zsh:
+source medical-stt-env/bin/activate
+
+# If using fish shell (CachyOS default):
+source medical-stt-env/bin/activate.fish
+```
+
+> On CachyOS, use `python` instead of `python3` (both point to Python 3).
+> CachyOS defaults to **fish shell** — use the `.fish` activation script if you're unsure.
 
 ---
 
@@ -40,7 +54,7 @@ cd "Source Code"
 pip install -r requirements.txt
 ```
 
-> **If you have an NVIDIA GPU**, install PyTorch with CUDA support instead:
+> **If you have an NVIDIA GPU** (recommended — speeds up Whisper significantly), install PyTorch with CUDA support instead:
 > ```bash
 > pip install torch --index-url https://download.pytorch.org/whl/cu121
 > ```
@@ -85,5 +99,9 @@ python stt_pipeline.py
 - **Whisper models** will be downloaded automatically on first run (~1–3 GB depending on model size).
 - Make sure your virtual environment is always activated before running scripts:
   ```bash
-  source venv/bin/activate
+  # bash/zsh:
+  source medical-stt-env/bin/activate
+
+  # fish shell (CachyOS default):
+  source medical-stt-env/bin/activate.fish
   ```
