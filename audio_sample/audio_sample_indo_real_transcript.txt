@@ -1,0 +1,58 @@
+Dokter: Selamat pagi. Apa keluhan Anda hari ini?
+
+Pasien: Selamat pagi Dokter. Saya sakit tenggorokan, demam, dan kepala pusing 
+        sudah tiga hari.
+
+Dokter: Usia dan jenis kelamin?
+
+Pasien: Saya perempuan, 28 tahun.
+
+Dokter: Demamnya sudah diukur?
+
+Pasien: Sudah Dokter, kemarin 38,5 derajat.
+
+Dokter: Tenggorokan sakitnya seperti apa? Susah menelan?
+
+Pasien: Iya Dokter, perih dan susah menelan. Ada juga benjolan kecil di leher 
+        yang nyeri kalau ditekan.
+
+Dokter: Ada batuk atau pilek?
+
+Pasien: Pilek sedikit, batuk tidak ada.
+
+Dokter: Nafsu makan?
+
+Pasien: Turun, Dokter. Susah makan karena tenggorokan sakit.
+
+Dokter: Sudah minum obat apa?
+
+Pasien: Paracetamol beli sendiri, tapi demamnya naik lagi.
+
+Dokter: Punya riwayat penyakit sebelumnya?
+
+Pasien: Tidak ada Dokter.
+
+Dokter: Ada alergi obat?
+
+Pasien: Ada Dokter — saya alergi penisilin. Waktu kecil pernah bentol-bentol 
+        setelah minum penisilin.
+
+Dokter: Baik, penting sekali itu. Sekarang saya periksa ya. 
+        Buka mulut, bilang "aaa".
+
+Pasien: Aaa.
+
+Dokter: Tenggorokan merah, ada bercak putih di tonsil, dan kelenjar getah bening 
+        di leher membesar. Suhu 38,5, tekanan darah dan nadi normal.
+
+Pasien: Berbahaya tidak Dokter?
+
+Dokter: Ini tonsilitis bakteri. Saya beri azithromycin karena Anda alergi penisilin, 
+        ditambah paracetamol dan obat kumur antiseptik. Minum obat sampai habis, 
+        perbanyak minum air putih, dan istirahat. Kalau tiga hari tidak membaik 
+        atau demam makin tinggi, kembali ke sini. Saya juga minta swab tenggorokan 
+        untuk konfirmasi. Kontrol tiga hari lagi ya.
+
+Pasien: Baik Dokter, terima kasih.
+
+Dokter: Sama-sama, semoga lekas sembuh.
