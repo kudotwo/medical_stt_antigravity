@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical STT - Live Consultation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-stethoscope"></i>
+                <h1>Medical STT Live</h1>
+            </div>
+            <div class="status-indicator">
+                <span id="status-dot" class="dot"></span>
+                <span id="status-text">Ready</span>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Controls -->
+            <section class="controls-panel">
+                <div class="btn-group">
+                    <button id="btn-start" class="btn primary">
+                        <i class="fa-solid fa-microphone"></i> Start Consultation
+                    </button>
+                    <button id="btn-stop" class="btn danger" disabled>
+                        <i class="fa-solid fa-stop"></i> Stop & Analyze
+                    </button>
+                </div>
+                <div class="language-select">
+                    <label for="lang-select">Language:</label>
+                    <select id="lang-select">
+                        <option value="id-ID">Bahasa Indonesia</option>
+                        <option value="en-US">English</option>
+                    </select>
+                </div>
+            </section>
+
+            <div class="two-column-layout">
+                <!-- Live Transcript Panel -->
+                <section class="panel transcript-panel">
+                    <div class="panel-header">
+                        <h2><i class="fa-solid fa-comment-medical"></i> Live Transcript</h2>
+                    </div>
+                    <div class="panel-body">
+                        <div id="transcript-box" class="transcript-box">
+                            <p class="placeholder">Click "Start Consultation" and begin speaking...</p>
+                            <p id="final-text"></p>
+                            <p id="interim-text" class="interim"></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Analysis Panel -->
+                <section class="panel analysis-panel">
+                    <div class="panel-header">
+                        <h2><i class="fa-solid fa-file-medical"></i> SOAP Report</h2>
+                        <button id="btn-download" class="btn secondary" style="display: none;">
+                            <i class="fa-solid fa-download"></i> CSV
+                        </button>
+                    </div>
+                    <div class="panel-body">
+                        <div id="loading-overlay" class="loading-overlay" style="display: none;">
+                            <div class="spinner"></div>
+                            <p>Gemini is analyzing the consultation...</p>
+                        </div>
+                        <div id="report-content" class="report-content">
+                            <p class="placeholder">The medical report will appear here after analysis.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>
