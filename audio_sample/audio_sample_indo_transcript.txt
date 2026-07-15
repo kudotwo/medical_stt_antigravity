@@ -1,0 +1,34 @@
+[0.0s->3.0s] Doctor: Selamat pagi, apa keluhan anda hari ini?
+[3.0s->8.0s] Patient: Selamat pagi, Dokter. Saya sakit tenggorokan, demam dan kepala pusing sudah 3 hari.
+[8.0s->10.0s] Doctor: Usia dan jenis kelamin?
+[10.0s->13.0s] Patient: Saya perempuan, 28 tahun.
+[13.0s->15.0s] Doctor: Demamnya sudah diukur?
+[15.0s->18.0s] Patient: Sudah, Dokter. Kemarin 38,5 derajat.
+[18.0s->21.0s] Doctor: Tenggorokan sakitnya seperti apa? Susah menelan?
+[21.0s->24.0s] Patient: Iya, Dokter. Perih dan susah menelan.
+[24.0s->29.0s] Patient: Ada juga benjolan kecil di leher yang nyeri kalau ditekan.
+[29.0s->31.0s] Doctor: Ada batuk atau pilak?
+[31.0s->34.0s] Patient: Pilak sedikit, batuk tidak ada.
+[34.0s->36.0s] Doctor: Nafsu makan?
+[36.0s->40.0s] Patient: Turun, Dokter. Susah makan karena tenggorokan sakit.
+[40.0s->42.0s] Doctor: Sudah minum obat apa?
+[42.0s->47.0s] Patient: Paracetomol beli sendiri, tapi demamnya naik lagi.
+[47.0s->49.0s] Doctor: Punya riwayat penyakit sebelumnya?
+[49.0s->51.0s] Patient: Tidak ada, Dokter.
+[51.0s->53.0s] Doctor: Ada alergi obat?
+[53.0s->56.0s] Patient: Ada, Dokter. Saya alergi penicillin.
+[56.0s->60.0s] Patient: Waktu kecil pernah benta-benta setelah minum penicillin.
+[60.0s->63.0s] Doctor: Baik, penting sekali itu. Sekarang saya periksa ya.
+[63.0s->65.0s] Doctor: Buka mulut, bilang A.
+[65.0s->67.0s] Patient: A.
+[67.0s->72.0s] Doctor: Tenggorokan merah, ada bercak putih di tonsil dan kelenjar getah bening di leher membesar.
+[72.0s->76.0s] Doctor: Suhu 38,5, tekanan darah dan nadin normal.
+[76.0s->79.0s] Patient: Berbahaya tidak, Dokter.
+[79.0s->85.0s] Doctor: Ini tonsilitis bakteri. Saya beri azitromisin karena Anda alergi penicillin.
+[85.0s->88.0s] Doctor: Ditambah paracetomol dan obat kumur antiseptik.
+[88.0s->92.0s] Doctor: Minum obat sampai habis, perbanyak minum air putih dan istirahat.
+[92.0s->96.0s] Doctor: Kalau 3 hari tidak membaik atau demam makin tinggi, kembali ke sini.
+[96.0s->99.0s] Doctor: Saya juga minta swap tenggorokan untuk konfirmasi.
+[99.0s->101.0s] Doctor: Kontrol 3 hari lagi ya.
+[101.0s->103.0s] Patient: Baik, Dokter. Terima kasih.
+[103.0s->106.0s] Doctor: Sama-sama. Semoga lekas sembuh.
