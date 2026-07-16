@@ -1,6 +1,9 @@
 openai-whisper
 torch
 google-genai
-anthropic
 pandas
 python-dotenv
+fastapi
+uvicorn
+pydantic
+imageio-ffmpeg
