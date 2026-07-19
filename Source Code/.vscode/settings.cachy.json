@@ -1,0 +1,12 @@
+{
+    "python.defaultInterpreterPath": "/home/kuo/Documents/BINUS ASO/Antigravity Medical STT/medical_stt_antigravity/medical-stt-env/bin/python",
+    "python.terminal.activateEnvironment": true,
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.venvPath": "/home/kuo/Documents/BINUS ASO/Antigravity Medical STT/medical_stt_antigravity",
+    "python.venvFolders": [
+        "medical-stt-env"
+    ],
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    }
+}
