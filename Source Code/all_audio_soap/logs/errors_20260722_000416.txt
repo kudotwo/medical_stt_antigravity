@@ -1,0 +1,20 @@
+[2026-07-22T04:45:40.376723] RES0002.txt | stage=read_transcript | UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+Traceback (most recent call last):
+  File "/home/kuo/Documents/BINUS ASO/Antigravity Medical STT/medical_stt_antigravity/Source Code/batch_soap_analysis.py", line 234, in run_ground_truth_batch
+    raw_text = txt_path.read_text(encoding='utf-8')
+  File "/usr/lib/python3.14/pathlib/__init__.py", line 788, in read_text
+    return f.read()
+           ~~~~~~^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+
+[2026-07-22T04:59:38.388202] RES0054.txt | stage=read_transcript | UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+Traceback (most recent call last):
+  File "/home/kuo/Documents/BINUS ASO/Antigravity Medical STT/medical_stt_antigravity/Source Code/batch_soap_analysis.py", line 234, in run_ground_truth_batch
+    raw_text = txt_path.read_text(encoding='utf-8')
+  File "/usr/lib/python3.14/pathlib/__init__.py", line 788, in read_text
+    return f.read()
+           ~~~~~~^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+
