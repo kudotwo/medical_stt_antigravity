@@ -1,3 +1,25 @@
+// ── Auth: redirect to login on 401 ──────────────────────────────────────────
+const _originalFetch = window.fetch.bind(window);
+window.fetch = async function(...args) {
+    const response = await _originalFetch(...args);
+    if (response.status === 401) {
+        window.location.href = '/login';
+        return response;
+    }
+    return response;
+};
+
+// ── Logout button ─────────────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+    const btnLogout = document.getElementById('btn-logout');
+    if (btnLogout) {
+        btnLogout.addEventListener('click', async () => {
+            await fetch('/api/logout', { method: 'POST', credentials: 'include' });
+            window.location.href = '/login';
+        });
+    }
+});
+
 // Check for browser support
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 

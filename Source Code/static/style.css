@@ -67,6 +67,47 @@ header {
     color: var(--text-muted);
 }
 
+/* Header right section (status + logout) */
+.header-right {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0;
+}
+
+.header-right .status-indicator {
+    padding-right: 1.2rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.header-right .btn-logout-header {
+    margin-left: 1.2rem;
+}
+
+.btn-logout-header {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.85rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--text-muted);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-logout-header:hover {
+    background: rgba(239,68,68,0.12);
+    border-color: rgba(239,68,68,0.3);
+    color: #fca5a5;
+}
+
+
 .dot {
     width: 10px;
     height: 10px;

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login — Medical STT Live</title>
+    <meta name="description" content="Sign in to Medical STT Live — AI-powered clinical documentation assistant.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --bg-deep:     #050a14;
+            --bg-surface:  #0d1626;
+            --bg-card:     rgba(255,255,255,0.045);
+            --accent:      #3b82f6;
+            --accent-glow: rgba(59,130,246,0.35);
+            --accent-dark: #1d4ed8;
+            --success:     #22c55e;
+            --danger:      #ef4444;
+            --danger-glow: rgba(239,68,68,0.3);
+            --text-primary:   #f0f6ff;
+            --text-secondary: #7a90b0;
+            --border:      rgba(255,255,255,0.08);
+            --border-focus: rgba(59,130,246,0.6);
+        }
+
+        body {
+            min-height: 100vh;
+            background: var(--bg-deep);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Inter', sans-serif;
+            color: var(--text-primary);
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Animated gradient background blobs */
+        .bg-blob {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.18;
+            animation: float 8s ease-in-out infinite;
+            pointer-events: none;
+        }
+        .bg-blob-1 {
+            width: 520px; height: 520px;
+            background: radial-gradient(circle, #3b82f6, transparent);
+            top: -120px; left: -120px;
+            animation-delay: 0s;
+        }
+        .bg-blob-2 {
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, #6366f1, transparent);
+            bottom: -80px; right: -80px;
+            animation-delay: -4s;
+        }
+        .bg-blob-3 {
+            width: 300px; height: 300px;
+            background: radial-gradient(circle, #0ea5e9, transparent);
+            top: 50%; right: 15%;
+            animation-delay: -2s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50%       { transform: translateY(-24px) scale(1.04); }
+        }
+
+        /* Subtle grid pattern overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+            background-size: 48px 48px;
+            pointer-events: none;
+        }
+
+        /* Login card */
+        .login-wrapper {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 420px;
+            padding: 24px;
+            animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(32px);
+        }
+
+        @keyframes slideUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .login-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 40px 36px;
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            box-shadow:
+                0 0 0 1px rgba(255,255,255,0.04) inset,
+                0 32px 64px rgba(0,0,0,0.5),
+                0 0 80px rgba(59,130,246,0.06);
+        }
+
+        /* Logo / Brand */
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+
+        .brand-icon {
+            width: 44px; height: 44px;
+            background: linear-gradient(135deg, var(--accent), #6366f1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #fff;
+            box-shadow: 0 4px 16px var(--accent-glow);
+            flex-shrink: 0;
+        }
+
+        .brand-text h1 {
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            color: var(--text-primary);
+        }
+
+        .brand-text p {
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-top: 1px;
+        }
+
+        /* Welcome text */
+        .login-heading {
+            margin-bottom: 28px;
+        }
+
+        .login-heading h2 {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .login-heading p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* Form */
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            margin-bottom: 8px;
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        /* Decorative left icon — not clickable */
+        .input-wrapper > i {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+            font-size: 14px;
+            transition: color 0.2s;
+            pointer-events: none;
+        }
+
+        .input-wrapper input {
+            width: 100%;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 12px 14px 12px 40px;
+            font-size: 14px;
+            font-family: 'Inter', sans-serif;
+            color: var(--text-primary);
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+        }
+
+        /* Extra right padding on password input to make room for the eye button */
+        #password {
+            padding-right: 44px;
+        }
+
+        .input-wrapper input::placeholder { color: var(--text-secondary); opacity: 0.6; }
+
+        .input-wrapper input:focus {
+            border-color: var(--border-focus);
+            background: rgba(59,130,246,0.06);
+            box-shadow: 0 0 0 3px rgba(59,130,246,0.12);
+        }
+
+        .input-wrapper input:focus ~ i,
+        .input-wrapper:focus-within > i {
+            color: var(--accent);
+        }
+
+        /* Password toggle */
+        .toggle-pw {
+            position: absolute;
+            right: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-size: 14px;
+            padding: 2px;
+            pointer-events: all;
+            transition: color 0.2s;
+        }
+        .toggle-pw:hover { color: var(--text-primary); }
+
+        /* Error message */
+        .error-banner {
+            display: none;
+            align-items: center;
+            gap: 8px;
+            background: rgba(239,68,68,0.1);
+            border: 1px solid rgba(239,68,68,0.25);
+            border-radius: 10px;
+            padding: 10px 14px;
+            margin-bottom: 16px;
+            font-size: 13px;
+            color: #fca5a5;
+            animation: fadeIn 0.25s ease;
+        }
+
+        .error-banner.show { display: flex; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-6px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            20%       { transform: translateX(-8px); }
+            40%       { transform: translateX(8px); }
+            60%       { transform: translateX(-6px); }
+            80%       { transform: translateX(6px); }
+        }
+
+        .shake { animation: shake 0.4s ease; }
+
+        /* Submit button */
+        .btn-login {
+            width: 100%;
+            padding: 13px;
+            margin-top: 8px;
+            background: linear-gradient(135deg, var(--accent), #6366f1);
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
+            box-shadow: 0 4px 20px var(--accent-glow);
+        }
+
+        .btn-login::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.15), transparent);
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .btn-login:hover:not(:disabled) { opacity: 0.92; transform: translateY(-1px); box-shadow: 0 8px 28px var(--accent-glow); }
+        .btn-login:hover:not(:disabled)::before { opacity: 1; }
+        .btn-login:active:not(:disabled) { transform: translateY(0); }
+        .btn-login:disabled { opacity: 0.5; cursor: not-allowed; }
+
+        .btn-login .btn-content { display: flex; align-items: center; justify-content: center; gap: 8px; }
+
+        .btn-login .spinner-sm {
+            display: none;
+            width: 16px; height: 16px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-top-color: #fff;
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+        }
+
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .btn-login.loading .spinner-sm { display: block; }
+        .btn-login.loading .btn-label { opacity: 0.7; }
+
+        /* Footer / badge */
+        .login-footer {
+            margin-top: 24px;
+            text-align: center;
+            font-size: 11.5px;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .login-footer i { color: var(--accent); font-size: 11px; }
+
+        /* Pulse dot on brand */
+        .pulse-dot {
+            width: 8px; height: 8px;
+            background: var(--success);
+            border-radius: 50%;
+            display: inline-block;
+            margin-left: 6px;
+            position: relative;
+            top: -1px;
+        }
+        .pulse-dot::after {
+            content: '';
+            position: absolute;
+            inset: -3px;
+            background: var(--success);
+            border-radius: 50%;
+            opacity: 0.4;
+            animation: pulse 1.6s ease-out infinite;
+        }
+
+        @keyframes pulse {
+            0%   { transform: scale(1); opacity: 0.4; }
+            100% { transform: scale(2.2); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated background blobs -->
+    <div class="bg-blob bg-blob-1"></div>
+    <div class="bg-blob bg-blob-2"></div>
+    <div class="bg-blob bg-blob-3"></div>
+
+    <div class="login-wrapper">
+        <div class="login-card">
+            <!-- Brand -->
+            <div class="brand">
+                <div class="brand-icon">
+                    <i class="fa-solid fa-stethoscope"></i>
+                </div>
+                <div class="brand-text">
+                    <h1>Medical STT Live <span class="pulse-dot"></span></h1>
+                    <p>Clinical AI Assistant</p>
+                </div>
+            </div>
+
+            <!-- Heading -->
+            <div class="login-heading">
+                <h2>Welcome back</h2>
+                <p>Sign in to access the AI-powered consultation dashboard.</p>
+            </div>
+
+            <!-- Error banner -->
+            <div class="error-banner" id="error-banner">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <span id="error-msg">Invalid username or password.</span>
+            </div>
+
+            <!-- Form -->
+            <form id="login-form" novalidate>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-user"></i>
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            placeholder="Enter your username"
+                            autocomplete="username"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-lock"></i>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required
+                        >
+                        <button type="button" class="toggle-pw" id="toggle-pw" aria-label="Toggle password visibility">
+                            <i class="fa-solid fa-eye" id="pw-icon"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-login" id="btn-login">
+                    <span class="btn-content">
+                        <div class="spinner-sm"></div>
+                        <span class="btn-label">Sign In</span>
+                    </span>
+                </button>
+            </form>
+
+            <div class="login-footer">
+                <i class="fa-solid fa-shield-halved"></i>
+                Secured · Research Demo · BINUS ASO
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('login-form');
+        const btn = document.getElementById('btn-login');
+        const errorBanner = document.getElementById('error-banner');
+        const errorMsg = document.getElementById('error-msg');
+        const togglePw = document.getElementById('toggle-pw');
+        const pwInput = document.getElementById('password');
+        const pwIcon = document.getElementById('pw-icon');
+
+        // Password visibility toggle
+        togglePw.addEventListener('click', () => {
+            const isHidden = pwInput.type === 'password';
+            pwInput.type = isHidden ? 'text' : 'password';
+            pwIcon.className = isHidden ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye';
+        });
+
+        function showError(message) {
+            errorMsg.textContent = message;
+            errorBanner.classList.add('show');
+            const card = document.querySelector('.login-card');
+            card.classList.remove('shake');
+            void card.offsetWidth; // reflow to restart animation
+            card.classList.add('shake');
+        }
+
+        function hideError() {
+            errorBanner.classList.remove('show');
+        }
+
+        function setLoading(loading) {
+            btn.disabled = loading;
+            btn.classList.toggle('loading', loading);
+        }
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            hideError();
+
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value;
+
+            if (!username || !password) {
+                showError('Please enter both username and password.');
+                return;
+            }
+
+            setLoading(true);
+
+            try {
+                const res = await fetch('/api/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username, password }),
+                    credentials: 'include'
+                });
+
+                const data = await res.json();
+
+                if (res.ok) {
+                    // Redirect to main app
+                    window.location.href = '/app';
+                } else {
+                    showError(data.detail || 'Invalid username or password.');
+                }
+            } catch (err) {
+                showError('Connection error. Please try again.');
+            } finally {
+                setLoading(false);
+            }
+        });
+
+        // Clear error on typing
+        document.getElementById('username').addEventListener('input', hideError);
+        document.getElementById('password').addEventListener('input', hideError);
+    </script>
+</body>
+</html>
