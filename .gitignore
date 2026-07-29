@@ -39,3 +39,9 @@ desktop.ini
 
 # Jupyter notebooks checkpoints
 .ipynb_checkpoints/
+
+# User credentials store (never commit this!)
+users.json
+
+# Virtual environment
+medical-stt-env/
