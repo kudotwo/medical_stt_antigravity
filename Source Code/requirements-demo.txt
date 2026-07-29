@@ -1,0 +1,11 @@
+# Lightweight requirements for Render hosted demo.
+# Excludes Whisper & torch — not needed since the live UI uses the browser's
+# Web Speech API for microphone recording and only calls Gemini server-side.
+google-genai
+pandas
+python-dotenv
+fastapi
+uvicorn[standard]
+pydantic
+PyJWT
+bcrypt

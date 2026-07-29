@@ -7,3 +7,5 @@ fastapi
 uvicorn
 pydantic
 imageio-ffmpeg
+PyJWT
+bcrypt
