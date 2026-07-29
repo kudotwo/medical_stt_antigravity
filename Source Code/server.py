@@ -39,6 +39,40 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 # ─────────────────────────────────────────────
 #  User store helpers
 # ─────────────────────────────────────────────
+
+# Default users — pre-hashed with bcrypt.
+# These are the credentials used if users.json does not exist yet
+# (e.g. on a fresh Render deployment where the file isn't committed to git).
+_DEFAULT_USERS = {
+    "demo_user": {
+        "password_hash": "$2b$12$vgZZk6.95gQ1EFre3e65b.7gr7I3ymTqNWoiSMh.tn3fwkVLfg0ki",
+        "role": "demo",
+        "first_login": None,
+        "expires_days": 7,
+    },
+    "premium_user": {
+        "password_hash": "$2b$12$JTgyms30l69cPe38qwT/XeehkOp9rzGg6BGeWx.I3Qm5k/ht2OlNu",
+        "role": "premium",
+        "first_login": None,
+        "expires_days": None,
+    },
+}
+
+def _ensure_users_file() -> None:
+    """Create users.json with default credentials if it doesn't exist.
+    Called once at startup — handles fresh Render deployments automatically.
+    """
+    if not USERS_FILE.exists():
+        print(f"[Auth] users.json not found — creating with default accounts at {USERS_FILE}")
+        with open(USERS_FILE, "w", encoding="utf-8") as f:
+            json.dump(_DEFAULT_USERS, f, indent=2)
+        print("[Auth] users.json created ✓")
+    else:
+        print(f"[Auth] users.json found at {USERS_FILE}")
+
+_ensure_users_file()  # Run at import time
+
+
 def _load_users() -> dict:
     with open(USERS_FILE, "r", encoding="utf-8") as f:
         return json.load(f)

@@ -7,8 +7,10 @@ services:
     startCommand: uvicorn server:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: GEMINI_API_KEY
-        sync: false          # You will paste this in the Render dashboard
+        sync: false          # Paste your Gemini API key in the Render dashboard
       - key: HF_TOKEN
-        sync: false
+        sync: false          # Paste your HuggingFace token in the Render dashboard
       - key: JWT_SECRET_KEY
         generateValue: true  # Render auto-generates a secure random value
+      - key: ENABLE_LOGIN
+        value: true          # Set to false in the dashboard to bypass login
