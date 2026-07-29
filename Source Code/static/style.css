@@ -291,4 +291,59 @@ header {
 .soap-value {
     flex: 1;
     color: var(--text-main);
+    border-radius: 4px;
+    transition: background 0.2s ease, outline 0.2s ease;
+    padding: 2px 6px;
+    margin: -2px -6px;
+    outline: none;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+/* Edit mode styles */
+.soap-value.editable {
+    background: rgba(59, 130, 246, 0.08);
+    outline: 1px dashed rgba(59, 130, 246, 0.4);
+    cursor: text;
+}
+
+.soap-value.editable:focus {
+    background: rgba(59, 130, 246, 0.15);
+    outline: 2px solid var(--primary);
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+}
+
+.panel-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn.edit-active {
+    background-color: rgba(16, 185, 129, 0.2);
+    color: var(--success);
+    border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+.btn.edit-active:hover {
+    background-color: rgba(16, 185, 129, 0.3);
+}
+
+.edit-hint {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.25);
+    border-radius: 8px;
+    padding: 0.6rem 1rem;
+    font-size: 0.82rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to   { opacity: 1; transform: translateY(0); }
 }

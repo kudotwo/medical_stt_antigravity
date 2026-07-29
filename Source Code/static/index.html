@@ -62,9 +62,14 @@
                 <section class="panel analysis-panel">
                     <div class="panel-header">
                         <h2><i class="fa-solid fa-file-medical"></i> SOAP Report</h2>
-                        <button id="btn-download" class="btn secondary" style="display: none;">
-                            <i class="fa-solid fa-download"></i> CSV
-                        </button>
+                        <div class="panel-header-actions" style="display: none;" id="report-actions">
+                            <button id="btn-edit" class="btn secondary">
+                                <i class="fa-solid fa-pen-to-square"></i> Edit Report
+                            </button>
+                            <button id="btn-download" class="btn secondary">
+                                <i class="fa-solid fa-download"></i> CSV
+                            </button>
+                        </div>
                     </div>
                     <div class="panel-body">
                         <div id="loading-overlay" class="loading-overlay" style="display: none;">
