@@ -1,0 +1,145 @@
+[0.0s->1.7s] Doctor: What brings you in here today?
+[1.7s->3.6s] Patient: Yeah, I'm just bringing in my
+[3.6s->5.7s] Patient: three year old daughter who's
+[7.7s->10.8s] Patient: really been complaining about having a runny nose
+[10.8s->15.8s] Patient: and has been sneezing a lot over this past week.
+[16.8s->22.0s] Patient: I think the symptoms maybe started three or four days ago.
+[22.1s->25.7s] Doctor: Okay, and what symptoms started first?
+[25.7s->28.8s] Patient: I think the runny nose is what
+[29.0s->34.0s] Patient: started first in the nasal congestion.
+[35.8s->38.6s] Patient: She was telling me that she felt
+[38.6s->44.6s] Patient: that there was pressure or congestion in her nose.
+[44.6s->49.6s] Doctor: Okay, and then when did the sneezing start?
+[50.6s->54.5s] Patient: Shortly after that, probably maybe the same day
+[54.5s->57.0s] Patient: or the next day.
+[57.0s->60.5s] Doctor: Okay, does she have any coughing at all?
+[60.5s->63.7s] Patient: Yeah, so she did start to cough actually after that.
+[63.7s->65.9s] Patient: So the cough has been there for the last
+[68.2s->70.7s] Patient: maybe two to three days.
+[70.7s->72.6s] Patient: It's a dry cough.
+[72.6s->75.0s] Doctor: Okay, for the last two to three days.
+[75.0s->78.9s] Doctor: Okay, is she at all coughing up any green
+[78.9s->82.3s] Doctor: or yellow material or any blood at all?
+[82.3s->84.4s] Patient: No, nothing like that.
+[84.4s->89.7s] Doctor: Okay, so are her symptoms constant
+[90.3s->91.5s] Doctor: or do they come and go?
+[92.7s->93.9s] Patient: They've been pretty constant
+[93.9s->96.6s] Patient: and they've gotten a little bit worse
+[96.6s->100.7s] Patient: since they started three or four days ago.
+[100.7s->105.7s] Patient: I think now, yeah, her symptoms are at the worst right now.
+[107.9s->110.1s] Patient: She's not feeling very well.
+[110.1s->113.4s] Doctor: Okay, and has she been in contact with anyone at home
+[113.4s->115.8s] Doctor: or at school if she's going to school
+[115.8s->118.8s] Doctor: versus at home for the pandemic right now?
+[118.8s->122.5s] Doctor: But any ill contacts at all?
+[122.5s->124.5s] Patient: Well, she has been going to school.
+[124.5s->127.6s] Patient: There haven't been any COVID out cases where she goes
+[127.6s->131.3s] Patient: and they've been cautious,
+[131.3s->135.0s] Patient: but she is going to school right now.
+[135.0s->139.3s] Doctor: Okay, anything that you've tried that has helped her,
+[139.3s->141.6s] Doctor: like any over-the-counter cold medications?
+[145.0s->146.0s] Patient: No.
+[146.0s->150.9s] Doctor: Okay, any other symptoms like fevers, chills,
+[150.9s->153.9s] Doctor: shortness of breath, anything like that?
+[159.5s->163.7s] Patient: She did feel a bit warm to touch
+[163.7s->167.7s] Patient: and has looked a bit flushed in her face,
+[167.7s->171.9s] Patient: just doesn't look like herself.
+[171.9s->174.3s] Doctor: Okay, and does she behave like herself?
+[174.3s->175.9s] Doctor: Like, is she more tired at all,
+[175.9s->179.5s] Doctor: more irritable, anything like that?
+[179.5s->184.6s] Patient: Yeah, she's been maybe a bit more tired
+[184.7s->189.9s] Patient: and a bit more irritable, but not too bad.
+[192.1s->196.5s] Patient: She missed school today, but went yesterday.
+[196.5s->201.1s] Doctor: Okay, any recent travel at all?
+[201.1s->203.4s] Patient: No, we've been at home.
+[203.4s->205.6s] Doctor: Okay, any headaches, nausea or vomiting?
+[209.1s->210.4s] Patient: No.
+[210.4s->215.4s] Doctor: Okay, any chest pain that she's described?
+[217.7s->219.1s] Patient: No chest pain.
+[219.1s->222.6s] Doctor: Okay, any changes in her bowel movement,
+[222.6s->225.2s] Doctor: constipation, diarrhea?
+[225.2s->227.3s] Patient: No, that's been normal.
+[227.3s->232.4s] Doctor: Okay, any urinary problems?
+[232.4s->234.8s] Patient: No, she had a urinary tract infection
+[234.8s->239.2s] Patient: when she was little, but hasn't had any since.
+[239.2s->244.2s] Doctor: Okay, any issues with her sleep or appetite?
+[244.2s->247.3s] Patient: She has been a bit, I don't know, a bit fussy,
+[247.3s->250.5s] Patient: but she's been sleeping okay.
+[250.5s->255.3s] Doctor: Okay, has she lost any weight recently?
+[255.3s->258.5s] Patient: No, no, she's been gaining weight well.
+[258.5s->263.5s] Doctor: Okay, any exposure to any allergens
+[264.0s->266.6s] Doctor: or like fumes, dust, animals?
+[268.3s->270.1s] Patient: No, I can't think of anything like that.
+[270.1s->271.6s] Patient: We don't have any pets at home
+[271.6s->276.8s] Patient: and she hasn't been going anywhere else.
+[276.8s->279.0s] Doctor: Okay, has she been diagnosed
+[279.0s->282.6s] Doctor: with any medical conditions in the past?
+[282.6s->286.5s] Patient: No, she just had a urinary tract infection
+[286.5s->289.7s] Patient: when she was younger and that's about it.
+[289.7s->294.9s] Doctor: Okay, any allergies to medications that you know of?
+[295.7s->298.4s] Patient: Not that I'm aware of.
+[298.4s->301.0s] Doctor: Is she on any medications?
+[301.0s->302.9s] Patient: No.
+[302.9s->307.4s] Doctor: Okay, any hospitalizations or surgeries in the past?
+[307.4s->309.0s] Patient: No.
+[309.0s->312.7s] Doctor: Okay, any family history of any lung or heart conditions
+[312.7s->314.5s] Doctor: or anything else?
+[317.2s->322.8s] Patient: I have high cholesterol and I'm taking medication for it,
+[324.7s->328.5s] Patient: but nothing else.
+[328.5s->333.5s] Doctor: Okay, has she lost a sense of taste or smell at all?
+[334.4s->336.8s] Patient: No, she hasn't said anything like that,
+[336.8s->338.8s] Patient: just the nasal congestion.
+[338.8s->344.6s] Doctor: Okay, does she feel any pressure in around her face at all?
+[349.0s->350.9s] Patient: Yeah, I think so.
+[350.9s->353.4s] Patient: She doesn't say, no pain,
+[353.4s->357.3s] Patient: but does feel like a bit of pressure
+[357.3s->358.7s] Patient: with the congestion I think.
+[361.0s->366.8s] Doctor: Okay, any issues developed mentally
+[366.9s->368.3s] Doctor: as she was growing up?
+[369.3s->373.9s] Doctor: Did she meet all her milestones at an appropriate age?
+[373.9s->374.9s] Patient: She did, yeah.
+[374.9s->380.3s] Patient: She was walking at the appropriate times
+[381.6s->385.1s] Patient: and able to talk and does really well in school
+[385.1s->389.3s] Patient: and is social with her classmates and peers.
+[390.9s->393.9s] Doctor: So no issues or no complaints at all?
+[393.9s->395.4s] Patient: No, there hasn't been any concerns.
+[395.7s->399.7s] Patient: I feel that she's been developing normally.
+[399.7s->403.1s] Doctor: Okay, and are her immunizations all up to date?
+[403.1s->404.7s] Patient: They are, yeah.
+[404.7s->408.5s] Doctor: Okay, and were there any complications at all
+[408.5s->413.6s] Doctor: during your pregnancy with her or after the pregnancy?
+[413.6s->417.9s] Patient: No, it was a vaginal delivery at 38 weeks
+[417.9s->421.6s] Patient: and she was at a normal weight.
+[421.6s->426.4s] Patient: We were able to go home right away with no complications.
+[426.4s->429.0s] Patient: So yeah, things were good.
+[429.0s->432.2s] Doctor: Okay, and currently who does she live with?
+[432.2s->437.2s] Patient: So myself and my husband.
+[438.1s->441.9s] Doctor: Okay, and does anyone smoke in the house?
+[443.6s->448.6s] Patient: My husband does smoke, but he smokes outside usually
+[449.6s->454.6s] Patient: and he smokes, I don't know, maybe a half a pack a day.
+[454.6s->459.7s] Doctor: Okay, and I think that's all the questions I have.
+[461.8s->463.8s] Doctor: Do you have any questions or concerns?
+[465.4s->466.6s] Patient: Nothing else right now.
+[468.2s->471.2s] Doctor: So yeah, based on her symptoms,
+[471.2s->475.1s] Doctor: she does seem to have some just cold-like symptoms,
+[475.1s->480.2s] Doctor: viral symptoms, and it's been,
+[481.1s->485.0s] Doctor: it's been, you said three or four days in total, right?
+[485.0s->486.6s] Patient: Yeah, yeah.
+[486.6s->489.9s] Doctor: Yeah, and so most likely it's just caused
+[489.9s->494.9s] Doctor: by a viral infection, like common cold perhaps.
+[495.6s->498.4s] Doctor: It doesn't have any worrying signs
+[498.4s->502.9s] Doctor: of any systemic things going on right now.
+[503.9s->507.2s] Doctor: And so, and no signs of like a bacterial infection
+[507.2s->509.1s] Doctor: that I would be concerned about
+[509.1s->512.0s] Doctor: that I would give antibiotics for right now.
+[513.6s->516.7s] Doctor: But definitely if her symptoms get worse at home
+[517.6s->520.6s] Doctor: and if she starts having any kind of shortness of breath,
+[520.6s->525.6s] Doctor: increased coughing with producing more yellow
+[526.8s->530.7s] Doctor: or green material, and if she gets more feverish.
+[530.8s->532.3s] Doctor: So we'll also do a physical exam
+[532.3s->534.2s] Doctor: and take her temperature today as well.
+[534.2s->537.2s] Doctor: But yeah, some of these things to just look out for.
+[538.2s->541.0s] Doctor: But yeah, so we'll do the physical examination
+[541.0s->542.7s] Doctor: and go from there.
+[542.7s->544.4s] Patient: All right, thank you.
+[544.4s->545.9s] Doctor: You're welcome, take care.
