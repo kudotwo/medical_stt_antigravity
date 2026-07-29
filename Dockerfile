@@ -1,21 +1,22 @@
-# ── HuggingFace Spaces deployment ─────────────────────────────────────────────
-# Uses Python 3.11 slim to keep the image small (no Whisper/torch needed).
-# The app runs on port 7860 which is the HF Spaces default.
-
 FROM python:3.11-slim
 
-# Set working directory
-WORKDIR /app
+# HuggingFace Spaces requires a non-root user with UID 1000
+RUN useradd -m -u 1000 user
+USER user
+ENV HOME=/home/user \
+    PATH=/home/user/.local/bin:$PATH
 
-# Copy and install lightweight demo dependencies first (layer caching)
-COPY "Source Code/requirements-demo.txt" .
+WORKDIR $HOME/app
+
+# Copy and install lightweight demo dependencies first (Docker layer caching)
+# JSON array syntax is required for paths that contain spaces
+COPY --chown=user ["Source Code/requirements-demo.txt", "."]
 RUN pip install --no-cache-dir -r requirements-demo.txt
 
-# Copy the rest of the Source Code folder
-COPY "Source Code/" .
+# Copy all Source Code contents into the working directory
+COPY --chown=user ["Source Code/", "."]
 
-# HuggingFace Spaces requires the app to run on port 7860
+# HuggingFace Spaces default port
 EXPOSE 7860
 
-# Start the FastAPI server
 CMD ["uvicorn", "server:app", "--host", "0.0.0.0", "--port", "7860"]
