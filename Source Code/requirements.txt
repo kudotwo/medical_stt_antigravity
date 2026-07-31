@@ -1,6 +1,7 @@
 openai-whisper
 torch
 google-genai
+openai
 pandas
 python-dotenv
 fastapi

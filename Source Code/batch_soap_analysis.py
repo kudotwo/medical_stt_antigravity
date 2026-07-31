@@ -5,12 +5,12 @@ Batch processor for the Medical STT evaluation pipeline.
 
 For each audio file:
   1. Transcribes with faster-whisper (GPU float16) — cached if already done
-  2. Sends segments to Gemini for SOAP extraction
+  2. Sends segments to GPT (gpt-5.6-terra) for SOAP extraction
   3. Appends one row to: all_audio_soap/predicted/all_predicted.csv
 
 For each matching clean transcript:
   1. Reads the .txt ground-truth transcript
-  2. Sends raw text to Gemini for SOAP extraction
+  2. Sends raw text to GPT for SOAP extraction
   3. Appends one row to: all_audio_soap/ground_truth/all_ground_truth.csv
 
 Usage:
@@ -35,6 +35,7 @@ from datetime import datetime
 from pathlib import Path
 
 import pandas as pd
+from openai import RateLimitError as OpenAIRateLimitError
 
 # ---------------------------------------------------------------------------
 # Paths
@@ -54,8 +55,8 @@ COMBINED_PREDICTED_CSV   = PREDICTED_DIR   / 'all_predicted.csv'
 COMBINED_GROUND_TRUTH_CSV = GROUND_TRUTH_DIR / 'all_ground_truth.csv'
 ERROR_LOG = LOG_DIR / f'errors_{datetime.now().strftime("%Y%m%d_%H%M%S")}.txt'
 
-# Delay between Gemini calls (seconds) to avoid 503 rate limits
-GEMINI_DELAY = 3
+# Delay between GPT calls (seconds) to stay within rate limits
+GPT_DELAY = 1
 
 # ---------------------------------------------------------------------------
 # Import pipeline (adds LD_LIBRARY_PATH at import time via activate patch,
@@ -157,21 +158,23 @@ def run_predicted_batch(audio_files: list[Path], force: bool):
             failed += 1
             continue
 
-        # Stage 2: Gemini SOAP extraction (with retry on 503)
+        # Stage 2: GPT SOAP extraction (with retry on rate limit)
         result = None
         for attempt in range(1, 4):
             try:
                 result = diarize_and_extract_soap(segments)
                 break
-            except Exception as e:
-                err_str = str(e)
-                if '503' in err_str and attempt < 3:
-                    wait = 15 * attempt
-                    print(f'  ⚠️  Gemini 503, retrying in {wait}s (attempt {attempt}/3)...')
+            except OpenAIRateLimitError as e:
+                if attempt < 3:
+                    wait = 30 * attempt
+                    print(f'  ⚠️  OpenAI rate limit hit, retrying in {wait}s (attempt {attempt}/3)...')
                     time.sleep(wait)
                 else:
-                    _log_error(name, 'gemini_soap', e)
+                    _log_error(name, 'gpt_soap', e)
                     break
+            except Exception as e:
+                _log_error(name, 'gpt_soap', e)
+                break
 
         if result is None:
             failed += 1
@@ -195,9 +198,9 @@ def run_predicted_batch(audio_files: list[Path], force: bool):
             _log_error(name, 'save', ValueError('SOAP result was None after extraction'))
             failed += 1
 
-        # Rate-limit Gemini calls
+        # Rate-limit GPT calls
         if i < len(audio_files):
-            time.sleep(GEMINI_DELAY)
+            time.sleep(GPT_DELAY)
 
     print(f'\n{"="*60}')
     print(f'  Predicted batch done: {success} ✅  {skipped} skipped  {failed} ❌')
@@ -237,21 +240,23 @@ def run_ground_truth_batch(transcript_files: list[Path], force: bool):
             failed += 1
             continue
 
-        # Gemini SOAP extraction with retry
+        # GPT SOAP extraction with retry
         result = None
         for attempt in range(1, 4):
             try:
                 result = diarize_and_extract_soap_from_text(raw_text)
                 break
-            except Exception as e:
-                err_str = str(e)
-                if '503' in err_str and attempt < 3:
-                    wait = 15 * attempt
-                    print(f'  ⚠️  Gemini 503, retrying in {wait}s (attempt {attempt}/3)...')
+            except OpenAIRateLimitError as e:
+                if attempt < 3:
+                    wait = 30 * attempt
+                    print(f'  ⚠️  OpenAI rate limit hit, retrying in {wait}s (attempt {attempt}/3)...')
                     time.sleep(wait)
                 else:
-                    _log_error(name, 'gemini_soap', e)
+                    _log_error(name, 'gpt_soap', e)
                     break
+            except Exception as e:
+                _log_error(name, 'gpt_soap', e)
+                break
 
         if result is None:
             failed += 1
@@ -273,7 +278,7 @@ def run_ground_truth_batch(transcript_files: list[Path], force: bool):
             failed += 1
 
         if i < len(transcript_files):
-            time.sleep(GEMINI_DELAY)
+            time.sleep(GPT_DELAY)
 
     print(f'\n{"="*60}')
     print(f'  Ground truth batch done: {success} ✅  {skipped} skipped  {failed} ❌')

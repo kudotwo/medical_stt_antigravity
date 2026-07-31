@@ -7,9 +7,13 @@ Replaces openai-whisper (fp32, OOMs on 4GB VRAM) with faster-whisper
 Differences from stt_pipeline.py:
   - Uses `faster_whisper.WhisperModel` instead of `whisper.load_model`
   - compute_type = 'float16' -> half the VRAM, 2-4x faster throughput
-  - Segment format is identical -> all Gemini / SOAP logic is unchanged
+  - Segment format is identical -> all GPT / SOAP logic is unchanged
   - All public function signatures are identical -> batch_soap_analysis.py
     can import from this file without modification
+
+SOAP Extraction Model: OpenAI GPT-5 (gpt-5.6-terra)
+  - Switched from Google Gemini (gemini-3.1-flash-lite) per professor recommendation
+  - Same SOAP JSON schema and system prompt — only the API client changed
 
 Hardware tested:
   - NVIDIA RTX 3050 Laptop GPU (3.68 GB usable VRAM)
@@ -45,12 +49,13 @@ if os.path.exists(_cuda_lib_dir):
 import torch, pandas as pd
 from faster_whisper import WhisperModel
 from dotenv import load_dotenv
-from google import genai
+from openai import OpenAI
+from google import genai  # kept for transcribe_audio_gemini (deprecated, Whisper is primary)
 
 load_dotenv()
-GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY')
-if not GEMINI_API_KEY:
-    raise ValueError('GEMINI_API_KEY not found in .env')
+OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY')
+if not OPENAI_API_KEY:
+    raise ValueError('OPENAI_API_KEY not found in .env — please add it and get the key from your professor')
 
 # -- GPU / model config -------------------------------------------------------
 WHISPER_MODEL   = 'medium'
@@ -58,17 +63,20 @@ WHISPER_DEVICE  = 'cuda' if torch.cuda.is_available() else 'cpu'
 # float16 on GPU: ~1.4 GB VRAM (vs ~3.4 GB fp32 which OOMs on a 4 GB card).
 # Falls back to int8 on CPU so the script still works without a GPU.
 COMPUTE_TYPE    = 'float16' if WHISPER_DEVICE == 'cuda' else 'int8'
-GEMINI_MODEL    = 'gemini-3.1-flash-lite'
+GPT_MODEL       = 'gpt-5.6-terra'  # switched from gemini-3.1-flash-lite per professor recommendation
 
 print(f'[Config] Whisper device  : {WHISPER_DEVICE}')
 print(f'[Config] Whisper model   : {WHISPER_MODEL}')
 print(f'[Config] Compute type    : {COMPUTE_TYPE}')
-print(f'[Config] Gemini model    : {GEMINI_MODEL}')
+print(f'[Config] GPT model       : {GPT_MODEL}')
 
 if WHISPER_DEVICE == 'cuda':
     free_gb  = torch.cuda.mem_get_info()[0] / 1024**3
     total_gb = torch.cuda.get_device_properties(0).total_memory / 1024**3
     print(f'[Config] VRAM free       : {free_gb:.2f} GB / {total_gb:.2f} GB total')
+
+# Initialise the OpenAI client once (reused across all SOAP extraction calls)
+_openai_client = OpenAI(api_key=OPENAI_API_KEY)
 
 
 # -- Lazy model loader (load once, reuse across batch) ------------------------
@@ -157,11 +165,19 @@ def transcribe_audio(audio_path, use_cache=True):
 
 
 def transcribe_audio_gemini(audio_path):
-    """Transcribe audio using Gemini's native audio understanding (free tier, no GPU needed)."""
+    """
+    [DEPRECATED — Whisper GPU is the primary transcription path]
+    Transcribe audio using Gemini's native audio understanding (free tier, no GPU needed).
+    Kept for backwards compatibility but not used by the main pipeline or batch processor.
+    """
     import mimetypes
+    GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY')
+    if not GEMINI_API_KEY:
+        print('[ERROR] GEMINI_API_KEY not set — transcribe_audio_gemini() is deprecated.')
+        return []
     client = genai.Client(api_key=GEMINI_API_KEY)
     mime_type = mimetypes.guess_type(audio_path)[0] or 'audio/mpeg'
-    print(f'\n[1/3] Uploading audio to Gemini ({GEMINI_MODEL})...')
+    print(f'\n[1/3] Uploading audio to Gemini (deprecated path)...')
     uploaded = client.files.upload(
         file=audio_path,
         config={'mime_type': mime_type}
@@ -177,7 +193,7 @@ def transcribe_audio_gemini(audio_path):
     )
     try:
         resp = client.models.generate_content(
-            model=GEMINI_MODEL,
+            model='gemini-2.0-flash',
             contents=[uploaded, prompt]
         )
         raw = resp.text.strip()
@@ -257,53 +273,47 @@ def _fmt(segments):
 
 
 def diarize_and_extract_soap(segments):
-    print('\n[3/3] Sending to Gemini for diarization + SOAP extraction...')
-    client = genai.Client(api_key=GEMINI_API_KEY)
+    """Send STT segments to GPT for speaker diarization + SOAP extraction."""
+    print(f'\n[3/3] Sending to GPT ({GPT_MODEL}) for diarization + SOAP extraction...')
     user_msg = 'Label each segment as Doctor or Patient and extract SOAP.\n\nTRANSCRIPT:\n' + _fmt(segments)
     try:
-        resp = client.models.generate_content(
-            model=GEMINI_MODEL,
-            contents=[
-                {'role': 'user',  'parts': [{'text': SYSTEM_PROMPT}]},
-                {'role': 'model', 'parts': [{'text': 'Understood. Producing SOAP JSON.'}]},
-                {'role': 'user',  'parts': [{'text': user_msg}]},
-            ]
+        response = _openai_client.chat.completions.create(
+            model=GPT_MODEL,
+            messages=[
+                {'role': 'system',    'content': SYSTEM_PROMPT},
+                {'role': 'assistant', 'content': 'Understood. Producing SOAP JSON.'},
+                {'role': 'user',      'content': user_msg},
+            ],
+            response_format={'type': 'json_object'},
         )
-        raw = resp.text.strip()
-        if raw.startswith('`'):
-            raw = raw.split('`')[1]
-            if raw.startswith('json'): raw = raw[4:]
-        raw = raw.strip()
+        raw = response.choices[0].message.content.strip()
         print(f'  RAW (first 200 chars): {raw[:200]}')
         return json.loads(raw)
     except Exception as e:
-        print(f'[ERROR] {e}')
+        print(f'[ERROR] GPT SOAP extraction failed: {e}')
         traceback.print_exc()
         return None
 
 
 def diarize_and_extract_soap_from_text(raw_text):
-    print('\n[Live] Sending raw text to Gemini for diarization + SOAP extraction...')
-    client = genai.Client(api_key=GEMINI_API_KEY)
+    """Send a plain-text transcript to GPT for diarization + SOAP extraction."""
+    print(f'\n[Live] Sending raw text to GPT ({GPT_MODEL}) for diarization + SOAP extraction...')
     user_msg = 'Diarize the following raw text transcript (split it into logical Doctor and Patient turns) and extract SOAP.\n\nRAW TRANSCRIPT:\n' + raw_text
     try:
-        resp = client.models.generate_content(
-            model=GEMINI_MODEL,
-            contents=[
-                {'role': 'user',  'parts': [{'text': SYSTEM_PROMPT}]},
-                {'role': 'model', 'parts': [{'text': 'Understood. Producing SOAP JSON.'}]},
-                {'role': 'user',  'parts': [{'text': user_msg}]},
-            ]
+        response = _openai_client.chat.completions.create(
+            model=GPT_MODEL,
+            messages=[
+                {'role': 'system',    'content': SYSTEM_PROMPT},
+                {'role': 'assistant', 'content': 'Understood. Producing SOAP JSON.'},
+                {'role': 'user',      'content': user_msg},
+            ],
+            response_format={'type': 'json_object'},
         )
-        raw = resp.text.strip()
-        if raw.startswith('`'):
-            raw = raw.split('`')[1]
-            if raw.startswith('json'): raw = raw[4:]
-        raw = raw.strip()
+        raw = response.choices[0].message.content.strip()
         print(f'  RAW (first 200 chars): {raw[:200]}')
         return json.loads(raw)
     except Exception as e:
-        print(f'[ERROR] {e}')
+        print(f'[ERROR] GPT SOAP extraction failed: {e}')
         traceback.print_exc()
         return None
 
@@ -354,7 +364,7 @@ def run_pipeline(audio_path, output_csv=None, output_transcript=None, gemini_stt
         print(f'[Config] Output CSV      : {output_csv}')
 
     print('=' * 60)
-    print('  Medical STT Pipeline  (faster-whisper GPU + Gemini)')
+    print(f'  Medical STT Pipeline  (faster-whisper GPU + {GPT_MODEL})')
     print('=' * 60)
 
     # Stage 1 -- Transcription
@@ -373,8 +383,8 @@ def run_pipeline(audio_path, output_csv=None, output_transcript=None, gemini_stt
     t0 = time.time()
     result = diarize_and_extract_soap(segs)
     if result is None:
-        print('[ERROR] Gemini extraction failed.'); return
-    print(f'  [Timer] Gemini SOAP   : {time.time() - t0:.1f}s')
+        print('[ERROR] GPT extraction failed.'); return
+    print(f'  [Timer] GPT SOAP      : {time.time() - t0:.1f}s')
 
     # Stage 3 -- Save
     t0 = time.time()
