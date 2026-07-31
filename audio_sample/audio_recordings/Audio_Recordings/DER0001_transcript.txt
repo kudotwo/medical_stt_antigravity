@@ -1,0 +1,63 @@
+[0.2s->9.4s] Patient: Hey doc, I'm a 45 year old man coming in. I'm worried there's a little rash on my leg I'm getting nervous about.
+[9.4s->18.6s] Doctor: Hi. So I understand you have a rash on your leg.
+[18.6s->26.1s] Patient: I don't really know what I would call it. That's what I told the nurse when I came in, but it's more hurts than anything.
+[26.1s->30.6s] Doctor: Okay. How long has this been going on for?
+[30.6s->37.6s] Patient: It's been, it's been looking weird for about a week, but only, yes, it started hurting yesterday.
+[37.6s->43.1s] Patient: It's sort of looking strange and I just wanted to come in to get it checked out.
+[43.1s->49.4s] Doctor: Okay. When you say it's looking strange, can you tell me what you mean by that?
+[49.4s->56.1s] Patient: Swollen. It looks bigger than it did before and meaner if that makes sense.
+[56.1s->59.1s] Doctor: Swollen. Okay. Is it red?
+[59.1s->64.3s] Patient: Yeah, it's red. It's turning more red kind of in the area around it.
+[64.3s->70.3s] Patient: I've got these scabs. I've got diabetes. I'm not exactly the best with it.
+[70.3s->78.8s] Patient: I've been scratching at it and normally it's not that bad, but this is just strange looking. There's no other word for it.
+[78.8s->86.0s] Doctor: Okay. Have you ever had anything like this before? I guess you kind of just said that you didn't, but I'll just double check.
+[86.0s->96.0s] Patient: No, no, nothing. Well, I've had, I have occasional ulcers and sometimes I bang my toe when I'm not exactly the best taking care of my feet,
+[96.0s->102.5s] Patient: but this is the first time I've gone something that I've just never seen it before.
+[102.5s->106.7s] Doctor: Okay. Do you have any ulcers right now on your feet?
+[106.7s->116.1s] Patient: I think so. One of the last time I saw the family dog. I think I've got an ulcer on my left heel, but I think it's doing all right.
+[116.1s->120.1s] Doctor: Okay. And what leg are you having this problem with right now?
+[120.1s->122.1s] Patient: It's on my right. It's on my ankle.
+[122.1s->129.3s] Doctor: Okay. How have your sugars been controlled recently?
+[129.3s->140.7s] Patient: I stopped measuring them. Yeah, last time I measured it was pretty bad. I think my A1C last time was like nine, nine something.
+[140.7s->145.1s] Patient: I'm trying, I'm trying better to be with it. This is hard with work, you know?
+[145.1s->156.5s] Doctor: For sure. I can imagine. So in general, even if you don't know your numbers for your sugars, have you felt worse than usual lately? Have you felt rundown at all?
+[156.5s->165.5s] Patient: Yeah, actually I have. Peeing more, feel hungry. Sometimes it's tired, but I don't know. It's hard to tell.
+[165.5s->174.6s] Patient: There's an awful lot going on in my life right now with the kids, but it's hard to tell. I think, yeah, I need to see my family dog.
+[174.6s->182.2s] Doctor: Okay. That's definitely, you know, a good, a good idea moving forward just to make sure you get on top of these things.
+[182.2s->191.3s] Doctor: But I'm glad you came in today so we can, you know, have a better look at you and make sure that there's nothing super concerning going on.
+[191.3s->195.3s] Doctor: So in addition to this, have you had any other new symptoms?
+[195.3s->211.1s] Patient: Symptoms? I feel a little hot actually. When the swelling started, it's, it also started leaking this like white stuff from one of the, one of what used to be a scab. It's now like kind of open wound now.
+[211.1s->215.8s] Doctor: Okay. Okay. So when did you start feeling hot?
+[215.8s->219.3s] Patient: Honestly, last 12 hours.
+[219.3s->221.8s] Doctor: Okay. Do you take your temperature at all?
+[221.8s->224.8s] Patient: No, I don't have a thermometer at home.
+[224.8s->229.3s] Doctor: Have you had any difficulty breathing?
+[229.3s->231.3s] Patient: No, no.
+[231.3s->233.8s] Doctor: Any chest pain?
+[233.8s->234.9s] Patient: No.
+[234.9s->244.4s] Doctor: Have you noticed that your left, sorry, your right leg feels any hotter than the left?
+[244.4s->249.5s] Patient: Yeah. Yeah, it does actually. Changing socks the other day. Yeah.
+[249.5s->259.5s] Doctor: Okay. Hey, have you, have you felt ill recently? Have you been sick at all?
+[261.1s->273.6s] Patient: Aside from just feeling a little crummy last couple of weeks? No, don't really. Less energy today, but I was up last night thinking about this and yeah, wanted to come in and talk.
+[273.6s->283.9s] Doctor: Okay. Yeah, I'm, you did the right thing. I'm glad that you're in today. Is the pain on your leg worse when you touch it?
+[283.9s->290.9s] Patient: Yeah. Maybe not so much when I touch it, when I walk with it and I start flexing it. It doesn't like that.
+[290.9s->296.3s] Doctor: Okay.
+[296.3s->299.5s] Patient: Just resting it right now. It feels fine.
+[299.5s->314.3s] Doctor: It's okay. Okay. Okay. Well, I'm going to, if I think of any more questions specifically about your leg, I will, I'll go back to it, but I'm going to just move on and ask you a few questions about your overall health.
+[314.3s->321.3s] Doctor: You've already shared with me that you, you are diabetic. Do you have any other chronic conditions that you live with?
+[321.3s->342.9s] Patient: I see the family talk about cholesterol. I want a pill for that. I had asthma as a kid. Not too much of an issue now. And my back, I've had back pain for the last 10 years, but all I really take for is Tylenol Advil for that.
+[342.9s->351.1s] Doctor: Okay. Oh, my other question about your leg was, have you lost any feeling in it?
+[351.1s->369.0s] Patient: It kind of, it's like a dull ache sometimes when I touch it, but no, like in the area, the ankle, no, but definitely on my feet. Like over the years I've noticed I feel less on it compared to what I did previously. Yeah.
+[369.0s->385.4s] Doctor: That makes sense. Okay. So sorry, I kind of sidetracked there. So we talked about your diabetes. You said you have high cholesterol. So what medications are you currently taking?
+[385.4s->407.8s] Patient: I'm taking four pills right now. One of them is for the cholesterol. I think it's called Rusuvastatin. The other three, they're all diabetes medications, but I don't remember. Metformin is one of them.
+[407.8s->426.8s] Patient: I have a list somewhere. I'll give it to you later. Okay. Are you on insulin right now? No. Are you on any, are any of these medications new to you recently? No, no, but I've had them for about a year now.
+[426.8s->446.3s] Doctor: Okay. Do you have any allergies? Yeah, I do actually. I'm kind of selling. I can't take that. And what happens when you take penicillin? It's been a while as a kid. Apparently like face got bloated. I just have a hard time breathing.
+[446.3s->469.5s] Doctor: Okay. Well, we'll make sure that we don't give you that. Can you tell me if you've had any previous surgery? Yeah. What was it? I had my sinuses. I had some pretty bad sinusitis when I was in my teens and they went in, kind of carved a little bit of space out.
+[469.5s->494.5s] Doctor: Okay. Okay. Is that the only surgery that you've had? Yep. And can you tell me, do you have any family history of diabetes, skin problems, anything else that stands out to you?
+[494.5s->513.4s] Patient: Yep. Mom's side of the family. Pretty much everyone has diabetes, high blood pressure, cholesterol. That side of the family is pretty healthy. I think maybe one of my aunts had lung cancer, but she's a pretty big smoker too.
+[513.4s->524.1s] Doctor: Okay. And I'm just going to ask you a few questions about your lifestyle. So you said that you have children?
+[524.1s->548.5s] Patient: Yeah, I do. You live in town. Do you live with your kids? I live in town. I see my kids every two weeks. And what do you do for work? Did I already ask you this? No, I'm currently unemployed. I'm looking for work, partially employed, I suppose you should say over my own business.
+[549.5s->576.9s] Doctor: I see. And what do you do when you are working ideally? When I am working, I'm an accountant. Okay, cool. And do you smoke? Yeah, once in a while, yeah. I'm stressed, so. How often do you smoke on average? Last couple of weeks I've been smoking more, maybe like two packs a week.
+[576.9s->598.6s] Doctor: Okay. Do you drink alcohol? Yeah, yeah. How much do you typically drink? On an average week, maybe a 2-4. So maybe like three per day or something like that if you were to average it out? Yeah, if you average out. I mainly go through the 2-4 on a weekend to be honest.
+[598.6s->623.3s] Doctor: Oh, I see, okay. More so on the weekend, so maybe a little bit more than three per day on those days. Okay. Well, I think that that's everything that I need to ask you for now. I'd like to get a closer look at this leg. Did you have any other questions or concerns before we move forward with the physical exam?
+[623.3s->643.3s] Patient: No, I just want to get this figured out. Okay, yeah, we'll definitely do that for you. So yeah, I'm going to have a look at it. And then after that, I will go talk to the doctor that I'm working with and we'll see what we can do for you. Does that sound good? Thank you, Doc. Yeah, sounds great. Awesome. Okay, thanks.

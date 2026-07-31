@@ -1,0 +1,125 @@
+[0.0s->3.1s] Doctor: I was wondering if you could tell me what brought you in?
+[3.1s->11.0s] Patient: Sure. I have been coughing a lot. I've been feeling short of breath, and I just feel really
+[11.0s->14.6s] Patient: wheezy, so I thought I should come check it out.
+[14.6s->18.4s] Doctor: Okay. When did the cough start?
+[18.4s->23.1s] Patient: I've always had a cough. Well, I guess I've had a cough for the past five years,
+[23.1s->31.3s] Patient: but over the past three days, it's gotten a lot worse.
+[31.3s->35.7s] Doctor: Okay. Did anything happen three days ago that has brought the cough on?
+[39.8s->48.1s] Patient: No. I did groceries. I came home, and then I started coughing a little bit more,
+[48.1s->50.3s] Patient: and I haven't been able to stop since.
+[52.1s->57.6s] Doctor: Okay. Is there any particular time of day that the cough is worse, like morning, night?
+[60.1s->62.8s] Patient: It seems to be worse in the morning.
+[64.6s->67.9s] Doctor: Okay. Are you bringing up any sputum?
+[69.5s->75.2s] Patient: I am. It looks yellow, and sometimes even green.
+[76.5s->82.3s] Doctor: Okay. With your cough prior to three days ago, were you bringing up sputum with that?
+[86.2s->88.1s] Patient: I guess some, but it was clear.
+[89.7s->95.9s] Doctor: Okay. Are you bringing up more sputum now, the same, or less?
+[99.8s->102.6s] Patient: More sputum, and the sputum just looks different.
+[103.6s->105.7s] Doctor: Okay. Have you noticed any blood?
+[107.1s->107.6s] Patient: No blood.
+[108.8s->115.9s] Doctor: Okay. You mentioned you've had a wheeze. When did you notice that?
+[119.9s->123.3s] Patient: I guess I noticed that mostly last night, yeah.
+[124.7s->131.9s] Doctor: Okay. What types of activities have you had, shortness of breath?
+[135.3s->140.3s] Patient: I guess walking, doing day-to-day things,
+[141.3s->144.1s] Patient: has made me feel a little bit more short of breath than I used to feel.
+[145.8s->152.4s] Doctor: Okay. And have you been experiencing any other symptoms besides the cough,
+[152.4s->153.7s] Doctor: wheeze, and shortness of breath?
+[155.8s->159.1s] Patient: I feel a little bit more tired, but other than that, no.
+[160.8s->167.3s] Doctor: Okay. So a bit more tired. How has your sleep been?
+[167.8s->175.8s] Patient: Sleep has been pretty normal. Yeah, it's been the same.
+[176.7s->179.2s] Patient: I guess it's the coughing that's making me tired.
+[180.5s->185.8s] Doctor: Okay. Have you had any ear pain or eye pain?
+[187.6s->189.2s] Patient: Ear pain or eye pain? No.
+[190.0s->194.0s] Doctor: Any discharge from either your ears or eyes?
+[195.6s->195.8s] Patient: No.
+[196.5s->198.1s] Doctor: Okay. Have you had a runny nose?
+[199.3s->199.6s] Patient: No.
+[200.8s->202.0s] Doctor: Or felt congested?
+[203.3s->203.5s] Patient: No.
+[204.5s->206.2s] Doctor: Okay. Have you had a sore throat?
+[207.7s->208.0s] Patient: No.
+[209.0s->210.7s] Doctor: Or any difficulty swallowing?
+[213.0s->213.3s] Patient: No.
+[213.9s->217.7s] Doctor: Okay. Any changes to your sense of smell or taste?
+[219.2s->219.4s] Patient: No.
+[220.7s->224.9s] Doctor: Okay. Have you had any changes in appetite?
+[227.5s->228.7s] Patient: No, I don't think so.
+[229.3s->232.8s] Doctor: All right. And have you had any weight loss over the last several months?
+[234.7s->235.6s] Patient: Weight loss? No.
+[236.6s->241.2s] Doctor: Okay. How about, have you had any fevers or chills?
+[242.8s->247.1s] Patient: Fevers or chills? No, no, nothing like that.
+[248.1s->249.4s] Doctor: How about night sweats?
+[249.4s->249.7s] Patient: No.
+[250.4s->251.6s] Doctor: Have you had any chest pain?
+[253.8s->261.4s] Patient: No chest. Well, my chest feel, I guess sometimes it feels painful because I'm coughing so much,
+[261.4s->264.0s] Patient: but nothing more than that.
+[265.6s->270.6s] Doctor: Okay. Do you get chest pain when you exert yourself physically?
+[274.3s->274.5s] Patient: No.
+[276.0s->277.8s] Doctor: Okay. So it's just after the coughing?
+[278.5s->278.9s] Patient: Yeah.
+[279.7s->282.7s] Doctor: Okay. And how would you describe the character of the chest pain?
+[282.7s->285.8s] Doctor: Some people will say sharp, dull, achy.
+[288.9s->291.4s] Patient: I would say dull.
+[292.4s->301.9s] Doctor: Okay. And have you had any like heart palpitations feeling like your heart's racing?
+[304.1s->304.3s] Patient: No.
+[305.3s->312.4s] Doctor: And how about any episodes where you felt like you were going to faint or yeah, pass out?
+[313.1s->313.4s] Patient: No.
+[314.4s->323.9s] Doctor: Okay. And have you had any swelling in your feet, ankles, hands?
+[325.7s->326.8s] Patient: No, nothing like that.
+[327.7s->331.4s] Doctor: Okay. And then have you had any urinary problems?
+[334.0s->334.2s] Patient: No.
+[335.0s->336.6s] Doctor: Any bowel problems?
+[336.6s->336.9s] Patient: No.
+[337.9s->341.8s] Doctor: Okay. And then any joint pains or muscle aches?
+[343.6s->345.0s] Patient: No, nothing like that.
+[345.9s->348.9s] Doctor: And how about any rashes anywhere?
+[350.6s->350.9s] Patient: No.
+[352.0s->356.1s] Doctor: Okay. And then, sorry, have you had any nausea or vomiting?
+[357.7s->358.0s] Patient: No.
+[358.6s->363.8s] Doctor: Okay. In terms of your past medical history, have you been diagnosed with any conditions before?
+[366.0s->368.8s] Patient: I have high blood pressure and diabetes.
+[369.8s->372.2s] Doctor: I see. Are you on any medications for those?
+[372.9s->385.0s] Patient: For the blood pressure, the high blood pressure, I'm on a beta blocker. And then for my diabetes,
+[385.0s->387.9s] Patient: I'm on metformin.
+[389.7s->394.0s] Doctor: Okay. Are you taking any other medications?
+[396.6s->398.6s] Patient: Just some calcium and vitamin D.
+[400.3s->401.6s] Doctor: Any surgeries in the past?
+[404.6s->404.9s] Patient: Nope.
+[406.2s->407.8s] Doctor: Any allergies to medications?
+[409.4s->409.7s] Patient: No.
+[410.4s->414.1s] Doctor: Okay. And are your immunizations up to date?
+[415.5s->424.8s] Patient: I believe so, but I recently learned that I should get something called a pneumococcal vaccine.
+[425.7s->427.1s] Patient: I haven't gotten that yet.
+[428.9s->436.5s] Doctor: Yeah, you're right. So for, in Canada, or anybody, or in Ontario, at least anybody
+[436.5s->441.5s] Doctor: who's older than 65, it's recommended to get this vaccine to protect against
+[442.9s->446.9s] Doctor: certain types of bacterial infections, a type which can cause pneumonia.
+[448.0s->451.3s] Doctor: So it would be good, something that you can set up with your family doctor.
+[454.3s->454.5s] Patient: Okay.
+[455.8s->461.7s] Doctor: Yeah. And so, are you, so do you smoke cigarettes?
+[463.4s->464.1s] Patient: I used to.
+[465.9s->469.4s] Doctor: Okay. And how much do you smoke? Or how much did you used to smoke?
+[471.2s->481.2s] Patient: I smoked a pack a day and I smoked for 45 years, but I stopped two years ago.
+[483.2s->487.9s] Doctor: Okay. That's great that you were able to stop. And do you drink alcohol?
+[489.8s->492.6s] Patient: Occasionally, like once every two weeks.
+[494.0s->500.6s] Doctor: Okay. And any triggers that you can think of you were exposed to, either at work or home,
+[501.3s->507.3s] Doctor: like chemicals or things that you were exposed to that you had to breathe, that you breathed in?
+[510.0s->511.4s] Patient: No, nothing like that.
+[512.3s->514.0s] Doctor: Okay. Have you traveled anywhere?
+[515.2s->515.4s] Patient: No.
+[516.5s->520.6s] Doctor: All right. And have you been anybody who's been sick or has similar symptoms?
+[522.6s->522.8s] Patient: No.
+[523.9s->528.3s] Doctor: All right. And anybody in the family have a heart or lung condition?
+[531.1s->531.4s] Patient: No.
+[531.9s->533.3s] Doctor: Any cancers in the family?
+[536.7s->539.3s] Patient: There was liver cancer.
+[541.6s->552.8s] Doctor: Okay. And I think that, okay. And that was all I wanted to ask on history.
+[552.8s->556.2s] Doctor: Was there anything else that you wanted to tell me today?
+[559.1s->564.1s] Patient: No. Just what do you think the problem is?
+[566.2s->571.1s] Patient: I've never felt this bad with my shortness of breath before.
+[573.4s->579.2s] Doctor: Yeah, certainly. So it sounds like it could be
+[581.2s->588.9s] Doctor: maybe a viral infection that brought on this cough and worsened the sputum.
+[589.9s->596.1s] Doctor: This could be a bacterial infection. It could be a COPD exacerbation.
+[597.0s->603.8s] Doctor: And also one of the other things that we would have to consider right now is COVID as well.
+[604.5s->612.5s] Doctor: And so we will do a PCR nasal swab for COVID and a chest x-ray and some other
+[613.2s->621.8s] Doctor: investigations as well. And we will try to get to the bottom of what's causing your shortness of
+[621.8s->624.9s] Doctor: breath. Okay, that sounds good. Thank you.
