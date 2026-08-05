@@ -1,7 +1,7 @@
 {
   "case_id": "CAR0001",
   "model": "gpt-5.6-terra",
-  "clinical_fidelity": 10,
-  "logical_consistency": 10,
-  "predictive_accuracy": 8
+  "clinical_fidelity": 95,
+  "logical_consistency": 95,
+  "soap_structural_fidelity": 90
 }
