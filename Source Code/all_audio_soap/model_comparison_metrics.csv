@@ -1,0 +1,16 @@
+case_id,model,clinical_fidelity,logical_consistency,predictive_accuracy
+CAR0001,gemini-3.1-flash-lite,10,10,8
+CAR0001,gemini-3.5-flash,10,10,8
+CAR0001,gpt-5.6-terra,10,10,8
+MSK0005,gemini-3.1-flash-lite,9,10,8
+MSK0005,gemini-3.5-flash,10,10,8
+MSK0005,gpt-5.6-terra,9,10,9
+RES0050,gemini-3.1-flash-lite,9,10,8
+RES0050,gemini-3.5-flash,10,10,8
+RES0050,gpt-5.6-terra,10,10,9
+GAS0003,gemini-3.1-flash-lite,9,10,8
+GAS0003,gemini-3.5-flash,10,10,8
+GAS0003,gpt-5.6-terra,10,10,8
+DER0001,gemini-3.1-flash-lite,9,10,9
+DER0001,gemini-3.5-flash,9,10,8
+DER0001,gpt-5.6-terra,9,10,8

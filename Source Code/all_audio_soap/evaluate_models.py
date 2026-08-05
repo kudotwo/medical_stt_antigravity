@@ -99,11 +99,29 @@ def get_ground_truth_soap(case_id):
 
 # ── LLM-as-a-judge (Gemini) ───────────────────────────────────────────────────
 
+# Primary and fallback judge models (in order of preference)
+_JUDGE_MODELS = ['gemini-3.5-flash', 'gemini-3.1-flash-lite']
+
+
+def _parse_judge_response(raw_text):
+    """Strip markdown fences and parse JSON from a judge response."""
+    text = raw_text.strip()
+    # Strip ```json ... ``` or ``` ... ``` fences
+    if text.startswith('`'):
+        lines = text.split('\n')
+        # Drop first line (```json or ```) and last line (```)
+        text = '\n'.join(lines[1:-1] if lines[-1].strip() == '```' else lines[1:])
+    text = text.strip()
+    return json.loads(text)
+
+
 def evaluate_soap_with_judge(gt_transcript, gt_soap, predicted_soap_dict):
     """
-    Grade a predicted SOAP using gemini-3.5-flash as judge.
+    Grade a predicted SOAP using Gemini as judge.
+    - Tries gemini-3.5-flash first, falls back to gemini-3.1-flash-lite.
+    - Up to 10 attempts total with exponential back-off (30s → 60s → 120s → 120s...).
+    - Strips markdown fences before JSON parsing to handle partial/malformed responses.
     Returns {"clinical_fidelity": int, "logical_consistency": int, "predictive_accuracy": int}.
-    Retries up to 5 times with 30s back-off on API errors.
     """
     client = genai.Client()
     predicted_soap_json = json.dumps(predicted_soap_dict, indent=2)
@@ -130,21 +148,29 @@ Output MUST be a valid JSON object strictly matching this schema:
   "predictive_accuracy": <int 1-10>
 }}
 """
-    for attempt in range(5):
+    max_attempts = 10
+    for attempt in range(max_attempts):
+        # Rotate to fallback judge model after half the attempts
+        judge = _JUDGE_MODELS[0] if attempt < max_attempts // 2 else _JUDGE_MODELS[-1]
         try:
             response = client.models.generate_content(
-                model=JUDGE_MODEL,
+                model=judge,
                 contents=prompt,
                 config=types.GenerateContentConfig(
                     response_mime_type="application/json",
                 )
             )
-            return json.loads(response.text)
+            result = _parse_judge_response(response.text)
+            if attempt > 0:
+                print(f"    [Judge] Succeeded on attempt {attempt+1} using {judge}")
+            return result
         except Exception as e:
-            print(f"    [Judge] Error (attempt {attempt+1}/5): {e}")
-            time.sleep(30)
+            wait = min(30 * (2 ** attempt), 120)  # 30, 60, 120, 120, ...
+            print(f"    [Judge] Error (attempt {attempt+1}/{max_attempts}, model={judge}): {e}")
+            print(f"    [Judge] Waiting {wait}s before retry...")
+            time.sleep(wait)
 
-    print("    [Judge] Failed after 5 retries — returning zeros.")
+    print("    [Judge] Failed after all retries — returning zeros.")
     return {"clinical_fidelity": 0, "logical_consistency": 0, "predictive_accuracy": 0}
 
 
