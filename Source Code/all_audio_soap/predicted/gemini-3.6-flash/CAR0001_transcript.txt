@@ -1,0 +1,58 @@
+[0.0s->8.8s] Doctor: brought you in today? Sure I'm just having a lot of chest pain and so I thought I should get it
+[8.8s->22.0s] Doctor: checked out. Okay and before we start could you remind me of your gender and age? Sure I'm 39
+[22.5s->35.8s] Doctor: I'm a male. Okay and so when did this chest pain start? It started last night but it's becoming
+[35.8s->47.9s] Doctor: sharper. Okay and where is this pain located? It's located on the left side of my chest. Okay and
+[47.9s->58.3s] Doctor: so how long has it been going on for than if it started last night? So I guess it would be a couple
+[58.3s->72.3s] Doctor: of hours now maybe like eight. Okay has it been constant throughout that time or changing? I would
+[72.4s->81.9s] Patient: say it's been pretty constant yeah. Okay and how would you describe the pain? People will use
+[81.9s->91.8s] Doctor: words sometimes like sharp, burning, achy. I'd say it's pretty sharp yeah. Sharp okay. Anything
+[91.8s->101.8s] Doctor: that you have tried since last night that's made the pain better? Not laying down helps.
+[103.5s->111.3s] Doctor: Okay so do you find laying down makes the pain worse? Yes definitely. Okay
+[113.0s->122.9s] Doctor: do you find that the pain is radiating anywhere? No. Okay and is there anything else that makes
+[122.9s->132.9s] Doctor: the pain worse besides laying down? Not that I've noticed no. Okay so not like taking a deep breath
+[132.9s->142.5s] Doctor: or anything like that? Maybe taking a deep breath yeah. Okay and when the pain started could you
+[144.7s->147.9s] Doctor: tell me could you think of anything that you were doing at the time?
+[151.7s->161.4s] Patient: I mean I was moving some furniture around but that I've done that before. Okay so you didn't feel
+[162.0s->173.9s] Doctor: like you hurt yourself when you were doing that? No. Okay and in regards to how severe the pain is
+[173.9s->180.7s] Doctor: on a scale of one to ten, ten being the worst pain you've ever felt, how severe would you say
+[180.7s->189.3s] Patient: the pain is? I'd say it's like a seven or eight it's pretty bad. Okay and with the pain do you
+[189.3s->197.7s] Patient: have any other associated symptoms? I feel a little light-headed and I'm having some trouble
+[197.7s->215.8s] Doctor: breathing. Okay have you had any loss of consciousness? No. Okay have you been experiencing any
+[216.4s->230.0s] Doctor: like racing of the heart? A little bit yeah. Okay and have you been sweaty at all?
+[231.5s->239.1s] Patient: Just from the short just from having issues breathing. Okay have you been having issues
+[239.1s->252.3s] Doctor: breathing since the pain started? Yes. Okay and recently have you had any periods of time where
+[252.3s->263.7s] Doctor: you like have been immobilized or you haven't been like able to move around a lot? No. Okay
+[264.6s->274.6s] Doctor: and have you been feeling sick at all any infectious symptoms? No. Okay have you had any
+[274.6s->289.0s] Doctor: nausea or vomiting? No. Any fevers or chills? No. Okay how about any abdominal pain? No. Any urinary
+[289.0s->301.8s] Doctor: problems? No. Or bowel problems? No. Okay have you had a cough? No. Okay you haven't brought up any
+[301.8s->312.1s] Doctor: blood? No. Okay have you had a wheeze with your difficulty breathing? No not that I've heard.
+[312.9s->319.3s] Doctor: Okay any changes to the like breath sounds at all like any noisy breathing?
+[320.4s->329.1s] Patient: No well I guess if when I'm really having trouble breathing yeah. Okay has anything like this ever
+[329.1s->342.7s] Doctor: happened to you before? No. No okay and have you have you had any night sweats? No. All right and
+[342.7s->351.9s] Patient: then how about any rashes or skin changes? No rashes but I guess like my neck seems to be a
+[351.9s->363.7s] Doctor: little swollen. Okay do you have any neck pain? No. Okay have you had any like accidents like a
+[363.7s->375.1s] Doctor: car accident or anything where you really jerked your neck? No. Okay any any trauma at all to the
+[375.6s->387.4s] Doctor: chest or or back? No no. Okay so just in regards to past medical history do you have any prior
+[387.5s->399.4s] Doctor: medical conditions? No. Okay any recent hospitalizations? No. Okay any prior surgeries?
+[400.6s->407.0s] Doctor: No. Okay do you take any medications regularly are they prescribed or over the counter?
+[407.9s->417.9s] Doctor: No. All right how about any allergies to medications? None. All right any immunizations
+[417.9s->427.1s] Doctor: or are they up to date? They're all up to date. Excellent all right and could you tell me
+[428.1s->435.8s] Patient: a little bit about your living situation currently? Sure I live in an apartment by myself
+[440.9s->450.9s] Patient: yep that's about it. Okay and how do you support yourself financially? I'm an accountant
+[452.5s->463.4s] Doctor: okay sounds like a pretty stressful job or that it can be. Do you smoke cigarettes? I do. Okay and
+[463.4s->472.2s] Doctor: how much do you smoke? I smoke about a pack a day. Okay how long have you been smoking for?
+[473.2s->484.4s] Patient: For the past 10 to 15 years. Okay and do you smoke cannabis? Sometimes. How much
+[484.4s->492.8s] Patient: marijuana would you smoke per week? Per week maybe about five milligrams not that much.
+[493.8s->501.0s] Doctor: Okay and do you use any other recreational drugs like cocaine, crystal meth,
+[501.9s->514.6s] Doctor: no opioids? No. Okay have you used IV drugs before? No. Okay and do you drink alcohol? I do.
+[515.3s->528.0s] Patient: Okay how much alcohol do you drink each week? About I'd say I have like one or two drinks a day
+[528.0s->540.2s] Patient: so about 10 drinks a week. Okay and then briefly could you tell me a little bit about your
+[540.2s->550.6s] Patient: like diet and exercise? Sure I try to eat healthy for dinner at least but most of my lunches are
+[551.9s->558.4s] Patient: I eat out and then in terms of exercise I try to exercise every other day I run
+[559.4s->566.9s] Doctor: for about half an hour. Okay oh that's great that you've been working on the activity and
+[566.9s->576.5s] Doctor: the diets as well. So has anything like this happened in your family before? No. Okay has
+[576.5s->584.0s] Patient: anybody in the family had a heart attack before? Actually yes my father had a heart attack when
+[584.0s->594.9s] Patient: he was 45. Okay and anybody in the family have cholesterol problems? I think my father did.
+[596.0s->605.0s] Doctor: I see okay and how about anybody in the family have stroke? No strokes. Okay and then any
+[605.0s->614.2s] Doctor: cancers in the family? No. Okay was there anything else that you wanted to
+[616.1s->625.5s] Patient: tell me about today that I on history? No I don't think so I think you asked me everything.

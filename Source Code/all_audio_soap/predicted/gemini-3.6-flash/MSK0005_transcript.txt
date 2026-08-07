@@ -1,0 +1,151 @@
+[0.0s->12.0s] Patient: Hi, I've had this pain on the outside of my right elbow now. I first started noticing
+[12.0s->17.4s] Patient: it several months ago, but recently it's just been more painful.
+[17.4s->25.1s] Doctor: Okay, so you said several months ago. Did anything happen several months ago? Was there
+[25.1s->29.7s] Doctor: any sort of trigger, trauma, anything like that to that area?
+[29.7s->41.6s] Patient: No, there wasn't any trauma or any triggers that I noticed. I was just feeling it a bit
+[41.6s->49.6s] Patient: more at the end of work. Yeah, I was just feeling the pain a bit more at the end of
+[49.6s->50.9s] Patient: work.
+[50.9s->57.3s] Doctor: Okay. Does anything make it better or worse, the pain?
+[58.0s->66.5s] Patient: Yeah, really if I'm just resting the elbow, it makes it better. I've tried things like
+[66.5s->76.9s] Patient: ibuprofen, which has helped with the pain. I'll do that for helping get through work
+[76.9s->80.8s] Patient: sometimes if the pain's bad enough.
+[80.8s->91.7s] Doctor: Right, okay. If you were to describe the quality of the pain, is it sharp, throbby, achy?
+[91.7s->104.6s] Patient: It's achy and then sometimes, depending on the movement, it can be sharp as well.
+[104.6s->112.3s] Doctor: It can be sharp, okay. Okay. What sorts of movements make it worse?
+[112.3s->127.7s] Patient: Really, it's mostly movements at my wrist. If I'm bending my wrist down, I can feel it.
+[127.7s->134.6s] Patient: If I'm having to pick things up or hold heavy objects at work, I do a lot of repetitive
+[134.6s->138.1s] Patient: things at work on a line.
+[138.1s->148.8s] Doctor: Okay, okay. One to ten, ten being the worst pain you've ever felt, how bad is this pain?
+[148.8s->151.2s] Patient: It is about a four.
+[151.2s->157.2s] Doctor: About a four, okay. Have you ever experienced this type of pain before?
+[157.2s->161.7s] Patient: No, I haven't.
+[162.7s->168.7s] Doctor: Do you feel like your pain's getting worse over the past several months or is it the
+[168.7s->171.0s] Doctor: same, getting better?
+[171.0s->173.0s] Patient: It's been getting worse.
+[173.0s->180.2s] Doctor: It's been getting worse, okay. Have you tried any topical ointments or anything like that
+[180.2s->181.2s] Doctor: for it?
+[182.7s->192.7s] Patient: I did, yeah. I tried some stuff that you can get at the drugstore and it did help take
+[192.7s->194.7s] Patient: the edge off a little bit.
+[194.7s->204.3s] Doctor: Okay. All right. Are you still able to move that arm, your right arm, as well as your
+[204.3s->205.7s] Doctor: hand?
+[205.7s->212.7s] Patient: I am, yeah. I have full range of motion of both the elbow and hand.
+[213.7s->216.8s] Doctor: Okay. And it's not like preventing you from doing everyday tasks?
+[218.8s->229.8s] Patient: No, I've been able to manage so far at work, but it is starting to become an issue with
+[229.8s->230.8s] Patient: my job.
+[230.8s->238.8s] Doctor: Okay. All right. And then do you have any sort of aches or pains in any other joint
+[238.8s->240.7s] Doctor: or muscle groups?
+[241.7s->245.7s] Patient: No, it's just right there on the outside of my right elbow.
+[245.7s->246.7s] Doctor: Okay.
+[246.7s->252.7s] Patient: And it's really annoying because I'm right handed as well, so yeah, it's causing problems
+[252.7s->253.7s] Patient: there.
+[253.7s->259.7s] Doctor: Right. And is the pain radiating upwards or downwards?
+[259.7s->264.7s] Patient: No, I kind of just feel it right over that one spot.
+[264.7s->268.7s] Doctor: Okay. Any numbness or tingling in that arm?
+[270.8s->274.3s] Patient: No, no numbness or tingling.
+[274.3s->281.9s] Doctor: Yeah. Okay. And then how about like your arm feeling like it's cold?
+[281.9s->286.9s] Patient: No, I haven't had anything like that.
+[286.9s->295.2s] Doctor: Okay. All right. And then otherwise, do you have any other symptoms?
+[295.2s->299.2s] Patient: No, it's just been elbow pain.
+[299.2s->302.5s] Doctor: Okay. So no weight loss?
+[303.5s->306.5s] Patient: No, my weight's been stable over these last few months.
+[306.5s->308.8s] Doctor: Okay. Fevers or chills?
+[308.8s->311.8s] Patient: No, I haven't had any fevers or chills.
+[311.8s->315.2s] Doctor: Okay. Any fatigue?
+[315.2s->317.2s] Patient: No, my energy's been good.
+[317.2s->322.6s] Doctor: Okay. How about rashes?
+[322.6s->323.6s] Patient: No rashes.
+[323.6s->330.0s] Doctor: Okay. Changes to your senses like vision, hearing, smell or taste?
+[330.0s->331.0s] Patient: No changes there.
+[331.0s->335.3s] Doctor: Okay. Any coughing, shortness of breath or wheezing?
+[336.2s->341.2s] Doctor: Okay. Chest pain, any heart palpitations or dizziness?
+[341.2s->343.2s] Patient: Nothing like that.
+[343.2s->346.2s] Doctor: Okay. Changes to your bowel movements?
+[346.2s->347.2s] Patient: No.
+[347.2s->349.6s] Doctor: No nausea or vomiting?
+[349.6s->352.6s] Patient: No, I haven't had any nausea or vomiting.
+[352.6s->354.9s] Doctor: Okay. Changes to your urine?
+[354.9s->357.9s] Patient: No, I haven't had any urinary symptoms.
+[357.9s->362.0s] Doctor: Okay. Memory loss or confusion?
+[362.0s->363.0s] Patient: No.
+[371.1s->371.1s] Doctor: So if you look at that right elbow, do you notice any redness or swelling?
+[371.1s->374.7s] Patient: No, I don't.
+[374.7s->381.7s] Doctor: No. Okay. Does it seem misaligned or asymmetrical compared to your other elbow?
+[381.7s->385.7s] Patient: No, it looks the same.
+[385.7s->390.7s] Doctor: It looks the same? Okay. So no skin changes or deformities there?
+[390.7s->392.3s] Patient: No.
+[392.3s->393.3s] Doctor: No.
+[393.3s->406.8s] Doctor: Okay. And now I'm going to get you to just palpate that lateral aspect of that elbow
+[406.8s->412.9s] Doctor: and you let me know if you feel pain when you push on that.
+[412.9s->416.9s] Patient: I feel pain at the lateral elbow.
+[416.9s->420.9s] Doctor: How about the medial aspect?
+[420.9s->422.9s] Patient: No pain.
+[422.9s->429.9s] Doctor: No pain? Okay. And how about when you palpate your forearm and your biceps?
+[429.9s->432.4s] Patient: No pain.
+[432.4s->438.8s] Doctor: Okay. All right. And then do you feel like it's hot, that area?
+[438.8s->440.7s] Patient: No.
+[440.7s->450.9s] Doctor: No? Okay. Now I am going to get you to extend your wrist.
+[450.9s->453.3s] Patient: Okay.
+[453.3s->461.4s] Doctor: And then keep your elbow in full extension as well? Does that hurt?
+[461.4s->463.4s] Patient: It does, yeah.
+[463.4s->472.6s] Doctor: Yeah, okay. How about when you flex your wrist with the elbow still in full extension?
+[472.6s->478.1s] Patient: It does, yeah, that hurts as well.
+[478.1s->482.1s] Doctor: Okay. How about when you flex your elbow?
+[482.1s->486.4s] Patient: No, that doesn't cause any pain.
+[486.4s->490.5s] Doctor: How about when you extend your shoulder all the way up?
+[490.5s->495.1s] Patient: No, nothing there. That feels fine.
+[495.1s->500.1s] Doctor: Okay. And then flexing your, or sorry, adducting your shoulder?
+[500.1s->501.4s] Patient: That feels normal.
+[501.4s->509.7s] Doctor: All right. And then how about when you pronate and supinate your forearms?
+[509.7s->517.1s] Patient: Pronation.
+[518.1s->526.1s] Doctor: So like twist your arm inward so that your palm is facing the floor?
+[526.1s->533.9s] Patient: No, that doesn't really cause any pain, pronation and supination.
+[533.9s->544.0s] Doctor: Okay. All right. All right. And then are you otherwise healthy or do you have any longstanding medical conditions?
+[544.0s->546.0s] Patient: I'm healthy.
+[546.0s->553.0s] Doctor: You're healthy. Okay. And then have you had any hospitalizations or surgeries in the past?
+[553.0s->562.1s] Patient: I had a surgery for a C-section for my son, but that's it.
+[562.1s->569.1s] Doctor: Okay. Okay. And how long ago was that?
+[569.1s->573.3s] Patient: That was about 17 years ago.
+[573.3s->577.3s] Doctor: Okay. And was that an emergency C-section?
+[577.3s->579.9s] Patient: No, it was not.
+[579.9s->585.2s] Doctor: Okay. And then are you on any medications?
+[585.2s->591.2s] Patient: No, I've just been taking a Tylenol and Advil for the pain.
+[591.2s->597.8s] Doctor: Okay. All right. Immunizations wise, are you up to date?
+[597.8s->599.8s] Patient: I am, yes.
+[599.8s->603.2s] Doctor: Okay. Do you have any allergies?
+[603.2s->605.5s] Patient: No allergies.
+[605.5s->615.6s] Doctor: Do you have any family history of any skeletal or muscular issues?
+[615.6s->619.6s] Patient: No, nothing like that in the family.
+[619.6s->624.2s] Doctor: Okay. Neurological issues in the family?
+[624.2s->627.2s] Patient: No neurological issues in the family.
+[627.2s->631.0s] Doctor: Okay. How about autoimmune conditions?
+[631.0s->634.0s] Patient: No, nothing like that.
+[634.0s->638.2s] Doctor: Okay. And then do you smoke?
+[638.2s->640.2s] Patient: No, I haven't smoked before.
+[640.2s->645.0s] Doctor: Okay. Do you do marijuana?
+[645.0s->647.0s] Patient: No, I don't use that.
+[647.0s->652.3s] Doctor: Okay. Alcohol?
+[652.3s->657.3s] Patient: Yeah, I'll have a glass of wine every once in a while, but maybe just one a week.
+[657.3s->665.2s] Doctor: Okay. And have you been around sick contacts recently?
+[665.2s->668.2s] Patient: No, I haven't been around anybody who's been sick.
+[670.8s->670.8s] Doctor: Okay. Any recent travel?
+[670.8s->672.8s] Patient: Nope, I've been at home.
+[672.8s->678.8s] Doctor: Okay. I think those are all the questions that I had for you.
+[678.8s->682.6s] Doctor: Did you have any questions of your own for myself?
+[682.6s->687.6s] Patient: No, I was just wondering what this pain could be in my elbow.
+[687.6s->698.3s] Doctor: Yeah, so right now it seems like you may have a case of something called lateral epicondylitis.
+[698.3s->705.0s] Doctor: So it's also known as tennis elbow.
+[705.0s->711.0s] Doctor: And there are a lot of things that could kind of predispose you to this.
+[711.0s->725.4s] Doctor: So it could be like a repetitive strain at work and like continuous contraction of your wrist extensor muscle group there.
+[725.4s->734.4s] Doctor: So for this, we basically recommend a couple of things to manage the pain.
+[734.4s->746.7s] Doctor: But first, like in terms of imaging, I don't think it is necessary because it doesn't seem like there was any trauma and I'm not too worried about any fractures.
+[746.7s->755.7s] Doctor: So to help you treat this, we recommend some activity modifications.
+[755.7s->765.7s] Doctor: So at work not doing things that are too repetitive, especially if it's using those extensor forearm muscles.
+[765.7s->769.7s] Doctor: And then you can use a compression sleeve as well.
+[769.7s->773.7s] Doctor: Continue taking Tylenol or NSAIDs for the pain.
+[773.7s->783.7s] Doctor: And really important is physical therapy to increase mobility and strength in that arm.
+[783.7s->794.5s] Doctor: And as well, you can apply things like ice to it for like the pain and swelling, if you see any.
+[794.5s->804.8s] Doctor: Yeah, so it should resolve in about six months to two years at most.
+[804.8s->817.3s] Doctor: But normally it does go away in a couple of months with some physical therapy and the compression and splints if you choose to do that.
+[817.3s->819.9s] Doctor: How does that sound?
+[819.9s->822.9s] Patient: Yeah, that sounds good. Thank you.
+[822.9s->824.9s] Doctor: Yeah, no worries.

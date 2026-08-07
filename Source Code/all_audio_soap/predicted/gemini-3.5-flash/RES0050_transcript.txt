@@ -122,4 +122,5 @@
 [597.0s->603.8s] Doctor: And also one of the other things that we would have to consider right now is COVID as well.
 [604.5s->612.5s] Doctor: And so we will do a PCR nasal swab for COVID and a chest x-ray and some other
 [613.2s->621.8s] Doctor: investigations as well. And we will try to get to the bottom of what's causing your shortness of
-[621.8s->624.9s] Patient: breath. Okay, that sounds good. Thank you.
+[621.8s->624.9s] Doctor: breath.
+[624.9s->627.1s] Patient: Okay, that sounds good. Thank you.
