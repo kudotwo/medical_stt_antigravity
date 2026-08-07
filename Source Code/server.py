@@ -123,15 +123,28 @@ _DEFAULT_USERS = {
     },
 }
 
+# ── In-memory fallback for read-only filesystems (e.g. Vercel) ───────────────
+# When users.json cannot be written to disk, we keep users in this dict.
+# Login still works; state just doesn't persist across serverless cold starts.
+_USERS_IN_MEMORY: bool = False
+_users_cache: dict = {}
+
 def _ensure_users_file() -> None:
     """Create users.json with default credentials if it doesn't exist.
-    Called once at startup — handles fresh Render deployments automatically.
+    On read-only filesystems (Vercel), falls back to an in-memory store.
     """
+    global _USERS_IN_MEMORY, _users_cache
     if not USERS_FILE.exists():
         print(f"[Auth] users.json not found — creating with default accounts at {USERS_FILE}")
-        with open(USERS_FILE, "w", encoding="utf-8") as f:
-            json.dump(_DEFAULT_USERS, f, indent=2)
-        print("[Auth] users.json created ✓")
+        try:
+            with open(USERS_FILE, "w", encoding="utf-8") as f:
+                json.dump(_DEFAULT_USERS, f, indent=2)
+            print("[Auth] users.json created ✓")
+        except OSError:
+            # Read-only filesystem (Vercel) — use in-memory store instead
+            print("[Auth] Read-only filesystem — using in-memory user store (Vercel mode).")
+            _USERS_IN_MEMORY = True
+            _users_cache = json.loads(json.dumps(_DEFAULT_USERS))  # deep copy
     else:
         print(f"[Auth] users.json found at {USERS_FILE}")
 
@@ -139,11 +152,17 @@ _ensure_users_file()  # Run at import time
 
 
 def _load_users() -> dict:
+    if _USERS_IN_MEMORY:
+        return dict(_users_cache)  # return a copy
     with open(USERS_FILE, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
 def _save_users(users: dict) -> None:
+    global _users_cache
+    if _USERS_IN_MEMORY:
+        _users_cache = users  # update in-memory (won't persist across cold starts)
+        return
     with open(USERS_FILE, "w", encoding="utf-8") as f:
         json.dump(users, f, indent=2)
 
