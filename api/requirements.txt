@@ -1,0 +1,11 @@
+# Lightweight dependencies for Vercel deployment.
+# Excludes Whisper & torch — audio transcription is handled by the
+# browser's built-in Web Speech API; only Gemini is called server-side.
+google-genai
+pandas
+python-dotenv
+fastapi
+uvicorn[standard]
+pydantic
+PyJWT
+bcrypt
