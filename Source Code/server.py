@@ -11,8 +11,63 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from dotenv import load_dotenv
 
-# Import the function from our existing pipeline
-from stt_pipeline import diarize_and_extract_soap_from_text, _flatten
+# Import the function from the STT pipeline.
+# Wrapped in try/except because stt_pipeline.py also imports whisper & torch,
+# which are heavy dependencies not installed on the lightweight Vercel deployment.
+# The live demo only uses the Gemini-based SOAP extraction — Whisper is never
+# called server-side (the browser handles transcription via the Web Speech API).
+try:
+    from stt_pipeline import diarize_and_extract_soap_from_text, _flatten
+except ImportError as _e:
+    print(f"[Config] stt_pipeline unavailable ({_e}) — running in Gemini-only mode.")
+    # Provide stub implementations so the rest of the module loads cleanly.
+    # diarize_and_extract_soap_from_text is called by /api/analyze, which still works
+    # because that function only uses Gemini internally (not Whisper).
+    import importlib, types as _types
+    # Re-attempt importing just the functions we need from a stripped import path
+    # by temporarily suppressing the whisper/torch requirement:
+    import sys as _sys, os as _os
+    _stt_mod = _types.ModuleType("stt_pipeline")
+    # Minimal stubs — will be overwritten if partial import succeeds
+    def _stub(*a, **kw): raise RuntimeError("stt_pipeline not available in this environment")
+    _stt_mod.diarize_and_extract_soap_from_text = _stub
+    _stt_mod._flatten = _stub
+    _sys.modules.setdefault("stt_pipeline", _stt_mod)
+    # Try a targeted import that skips the whisper/torch lines
+    try:
+        _stt_path = _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "stt_pipeline.py")
+        import importlib.util as _ilu
+        _spec = _ilu.spec_from_file_location("stt_pipeline_gemini", _stt_path)
+        # Can't easily skip the top-level imports — fall back to the Gemini-only approach
+        # by importing google-genai directly in server.py for the analyze endpoint.
+        from google import genai as _genai
+        import json as _json
+
+        def diarize_and_extract_soap_from_text(transcript_text: str):
+            """Fallback: call Gemini directly for SOAP extraction (no Whisper)."""
+            import os as _o
+            client = _genai.Client(api_key=_o.environ.get("GEMINI_API_KEY"))
+            prompt = (
+                "You are a clinical documentation assistant. Given the following doctor-patient "
+                "conversation transcript, extract a structured SOAP note in valid JSON.\n\n"
+                f"Transcript:\n{transcript_text}"
+            )
+            response = client.models.generate_content(
+                model="gemini-2.0-flash",
+                contents=prompt,
+            )
+            raw = response.text.strip()
+            if raw.startswith("```"):
+                raw = "\n".join(raw.split("\n")[1:])
+                raw = raw.rsplit("```", 1)[0].strip()
+            return _json.loads(raw)
+
+        def _flatten(df):
+            """Passthrough flatten — returns df unchanged in Gemini-only mode."""
+            return df
+
+    except Exception as _e2:
+        print(f"[Config] Gemini-only fallback also failed: {_e2}")
 
 # ─────────────────────────────────────────────
 #  Configuration
@@ -30,10 +85,20 @@ COOKIE_NAME  = "stt_session"
 ENABLE_LOGIN = os.environ.get("ENABLE_LOGIN", "true").strip().lower() == "true"
 print(f"[Config] Login required : {ENABLE_LOGIN}")
 
+# Optional fixed expiry date for demo accounts (Vercel-compatible — no disk writes).
+# Format: YYYY-MM-DD  e.g. "2026-08-21"
+# Leave unset or empty for no expiry.
+DEMO_EXPIRES_AT = os.environ.get("DEMO_EXPIRES_AT", "").strip()
+if DEMO_EXPIRES_AT:
+    print(f"[Config] Demo expires at : {DEMO_EXPIRES_AT}")
+else:
+    print("[Config] Demo expires at : (no expiry set)")
+
 app = FastAPI(title="Medical STT Live API")
 
 # Serve the static files (HTML, CSS, JS)
-app.mount("/static", StaticFiles(directory="static"), name="static")
+_STATIC_DIR = Path(__file__).parent / "static"
+app.mount("/static", StaticFiles(directory=_STATIC_DIR), name="static")
 
 
 # ─────────────────────────────────────────────
@@ -139,7 +204,7 @@ class CSVRequest(BaseModel):
 # ─────────────────────────────────────────────
 @app.get("/login")
 async def login_page():
-    with open("static/login.html", "r") as f:
+    with open(Path(__file__).parent / "static" / "login.html", "r") as f:
         return HTMLResponse(content=f.read())
 
 
@@ -158,23 +223,19 @@ async def api_login(body: LoginRequest):
         raise HTTPException(status_code=401, detail="Invalid username or password.")
 
     # --- Check demo account expiry ---
+    # Expiry is controlled by the DEMO_EXPIRES_AT environment variable (YYYY-MM-DD).
+    # This avoids writing to disk, which is not possible on Vercel's read-only filesystem.
+    # Leave DEMO_EXPIRES_AT unset for no expiry.
     role = user_data["role"]
-    if role == "demo":
-        now = datetime.now(timezone.utc)
-        if user_data["first_login"] is None:
-            # First login — stamp the timestamp
-            user_data["first_login"] = now.isoformat()
-            users[body.username] = user_data
-            _save_users(users)
-        else:
-            first_login_dt = datetime.fromisoformat(user_data["first_login"])
-            expires_days   = user_data.get("expires_days", 7)
-            expiry_dt      = first_login_dt + timedelta(days=expires_days)
-            if now >= expiry_dt:
-                raise HTTPException(
-                    status_code=403,
-                    detail="Your demo access has expired. Please contact us to upgrade."
-                )
+    if role == "demo" and DEMO_EXPIRES_AT:
+        try:
+            expiry_dt = datetime.fromisoformat(DEMO_EXPIRES_AT).replace(tzinfo=timezone.utc)
+            if datetime.now(timezone.utc) >= expiry_dt:
+                # Return a generic 401 — indistinguishable from wrong credentials
+                raise HTTPException(status_code=401, detail="Invalid username or password.")
+        except ValueError:
+            # Invalid date format in env var — ignore, no expiry enforced
+            print(f"[Auth] WARNING: DEMO_EXPIRES_AT='{DEMO_EXPIRES_AT}' is not a valid date (expected YYYY-MM-DD). Expiry skipped.")
 
     # --- Issue token ---
     token = _issue_token(body.username, role)
@@ -183,7 +244,7 @@ async def api_login(body: LoginRequest):
         key=COOKIE_NAME,
         value=token,
         httponly=True,
-        secure=False,       # set True in production behind HTTPS (Render handles this)
+        secure=True,        # Vercel always serves over HTTPS
         samesite="lax",
         max_age=int(JWT_EXPIRY.total_seconds()),
     )
@@ -206,7 +267,7 @@ async def root(request: Request):
     When ENABLE_LOGIN is False, serves the app directly.
     """
     if not ENABLE_LOGIN:
-        with open("static/index.html", "r") as f:
+        with open(Path(__file__).parent / "static" / "index.html", "r") as f:
             return HTMLResponse(content=f.read())
     token = request.cookies.get(COOKIE_NAME)
     if token and _verify_token(token):
@@ -216,7 +277,7 @@ async def root(request: Request):
 
 @app.get("/app")
 async def main_app(_user: dict = Depends(get_current_user)):
-    with open("static/index.html", "r") as f:
+    with open(Path(__file__).parent / "static" / "index.html", "r") as f:
         return HTMLResponse(content=f.read())
 
 
