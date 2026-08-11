@@ -35,16 +35,18 @@ except ImportError:
     pass
 
 import ctypes
-# Preload CUDA libraries so CTranslate2 finds libcublas.so.12 automatically
-_cuda_lib_dir = os.path.join(os.path.dirname(sys.executable), '..', 'lib', f'python{sys.version_info.major}.{sys.version_info.minor}', 'site-packages', 'nvidia', 'cu13', 'lib')
-if os.path.exists(_cuda_lib_dir):
-    for _lib in ['libcublasLt.so.12', 'libcublas.so.12', 'libcudart.so.12', 'libnvrtc.so.12']:
-        _lib_path = os.path.join(_cuda_lib_dir, _lib)
-        if os.path.exists(_lib_path):
-            try:
-                ctypes.CDLL(_lib_path, mode=ctypes.RTLD_GLOBAL)
-            except Exception:
-                pass
+# Preload CUDA libraries so CTranslate2 finds libcublas.so.12 automatically.
+# Linux only — Windows resolves CUDA DLLs automatically via PATH.
+if sys.platform != 'win32':
+    _cuda_lib_dir = os.path.join(os.path.dirname(sys.executable), '..', 'lib', f'python{sys.version_info.major}.{sys.version_info.minor}', 'site-packages', 'nvidia', 'cu13', 'lib')
+    if os.path.exists(_cuda_lib_dir):
+        for _lib in ['libcublasLt.so.12', 'libcublas.so.12', 'libcudart.so.12', 'libnvrtc.so.12']:
+            _lib_path = os.path.join(_cuda_lib_dir, _lib)
+            if os.path.exists(_lib_path):
+                try:
+                    ctypes.CDLL(_lib_path, mode=ctypes.RTLD_GLOBAL)
+                except Exception:
+                    pass
 
 import torch, pandas as pd
 from faster_whisper import WhisperModel
