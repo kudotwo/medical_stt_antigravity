@@ -49,7 +49,18 @@ except ImportError as _e:
             client = _genai.Client(api_key=_o.environ.get("GEMINI_API_KEY"))
             prompt = (
                 "You are a clinical documentation assistant. Given the following doctor-patient "
-                "conversation transcript, extract a structured SOAP note in valid JSON.\n\n"
+                "conversation transcript, extract a structured SOAP note in valid JSON.\n"
+                "Return ONLY valid JSON. Schema:\n"
+                "{\n"
+                '  "summary": "2-3 sentence clinical summary",\n'
+                '  "encounter_type": "initial_consultation|follow_up|results_review|other",\n'
+                '  "additional_notes": "social/environmental context, or null",\n'
+                '  "extraction_confidence": "high|medium|low",\n'
+                '  "subjective": {"chief_complaint":"","symptoms":[],"symptom_onset":"","medical_history":[],"current_medications":[],"allergies":[]},\n'
+                '  "objective": {"physical_exam_findings":[],"vital_signs":null},\n'
+                '  "assessment": {"diagnosis":[],"differential_diagnosis":[]},\n'
+                '  "plan": {"prescribed_medications":[],"treatment_plan":[],"investigations_ordered":[],"referrals":[],"follow_up":""}\n'
+                "}\n\n"
                 f"Transcript:\n{transcript_text}"
             )
             response = client.models.generate_content(
