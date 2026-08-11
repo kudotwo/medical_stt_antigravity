@@ -1,0 +1,7 @@
+{
+  "case_id": "RES0050",
+  "model": "gemini-3.1-flash-lite",
+  "clinical_fidelity": 98,
+  "logical_consistency": 100,
+  "soap_structural_fidelity": 95
+}

@@ -1,0 +1,7 @@
+{
+  "case_id": "CAR0001",
+  "model": "gemini-3.1-flash-lite",
+  "clinical_fidelity": 95,
+  "logical_consistency": 95,
+  "soap_structural_fidelity": 90
+}

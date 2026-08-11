@@ -1,0 +1,7 @@
+{
+  "case_id": "DER0001",
+  "model": "gpt-5.6-terra",
+  "clinical_fidelity": 98,
+  "logical_consistency": 95,
+  "soap_structural_fidelity": 92
+}

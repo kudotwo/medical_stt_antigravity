@@ -1,0 +1,158 @@
+[0.0s->1.9s] Doctor: What brings you in here today?
+[1.9s->2.9s] Patient: Yeah.
+[2.9s->3.9s] Patient: Hi.
+[3.9s->9.4s] Patient: I have a pain in my belly.
+[9.4s->11.3s] Patient: It started a couple of hours ago.
+[11.9s->12.9s] Doctor: Okay.
+[12.9s->17.2s] Doctor: And where exactly in your belly do you have this pain?
+[17.2s->19.5s] Patient: It's mostly up here on the right side.
+[19.5s->22.4s] Doctor: On the right side?
+[22.4s->23.4s] Patient: Yeah.
+[23.4s->24.4s] Doctor: Okay.
+[24.4s->26.2s] Doctor: And can you describe what kind of pain is it?
+[26.2s->33.6s] Doctor: Is it like a dull pain, a sharp pain, an aching pain?
+[33.6s->40.9s] Patient: I guess it's an aching pain, I'd say.
+[40.9s->46.2s] Patient: It would initially just come and go, but now it's staying.
+[46.2s->49.3s] Patient: It's not going away.
+[49.3s->50.3s] Doctor: Okay.
+[50.3s->56.4s] Doctor: And so it's in the right area, and does it travel anywhere elsewhere besides from the
+[56.4s->57.9s] Doctor: right side?
+[57.9s->58.9s] Patient: No.
+[58.9s->69.1s] Doctor: On a scale of 1 to 10, 1 being the least amount of pain you've felt in your life and 10 being
+[69.1s->72.7s] Doctor: the worst, how much would you rate it right now?
+[72.7s->76.0s] Patient: It's about an 8 maybe.
+[76.0s->77.0s] Doctor: An 8?
+[77.0s->78.0s] Doctor: Okay.
+[78.0s->79.0s] Patient: Yeah.
+[79.0s->80.0s] Doctor: And so just to clarify, when did it start?
+[80.0s->84.0s] Patient: It started about eight hours ago.
+[84.0s->85.3s] Doctor: Eight hours ago.
+[85.3s->86.3s] Doctor: Okay.
+[86.3s->88.4s] Doctor: And were you doing anything before?
+[88.4s->92.6s] Doctor: Did you have a meal, or were you asleep and it woke you up?
+[92.6s->96.4s] Doctor: What was going on before you had the pain?
+[96.4s->98.3s] Patient: I was just about to go to sleep.
+[98.3s->103.3s] Patient: I wasn't doing anything in particular at the time.
+[103.3s->104.9s] Doctor: Okay.
+[104.9s->108.8s] Doctor: And has it been getting worse since it first started?
+[108.8s->110.9s] Patient: Oh yeah, definitely.
+[110.9s->119.3s] Patient: It would come and go, but now for the past, I'd say, five to six hours, it's been constant.
+[119.3s->124.6s] Patient: It's just there all the time.
+[124.6s->130.1s] Doctor: And have you had any similar pain like this in the past?
+[130.5s->139.3s] Patient: I have the same pain that sort of comes and goes after I eat.
+[139.3s->147.7s] Patient: Usually after I've had something fatty, something from outdoors, maybe like a burger or fries
+[147.7s->154.6s] Patient: or something, I initially thought it was indigestion, but I don't know what's going on now.
+[154.6s->155.6s] Doctor: Okay.
+[155.6s->161.6s] Doctor: And does anything make it better or worse, anything that you've tried?
+[161.6s->168.0s] Patient: Well, I guess eating sometimes makes it worse, but I don't think there's anything that's
+[168.0s->169.0s] Patient: making it better.
+[169.0s->170.4s] Doctor: Okay.
+[170.4s->175.2s] Doctor: Have you tried any medications at all?
+[175.2s->179.0s] Patient: I tried Tylenol, but that didn't do anything.
+[179.0s->180.5s] Doctor: Okay.
+[180.5s->186.5s] Doctor: And besides the pain that you're having, do you have any nausea or vomiting?
+[186.5s->193.6s] Patient: I am a little nauseous, but no, I haven't vomited yet, no.
+[193.8s->194.8s] Doctor: Okay.
+[194.8s->198.7s] Doctor: And have you been having any fevers?
+[198.7s->200.5s] Patient: I don't think so.
+[200.5s->204.7s] Patient: I haven't checked, but I don't feel feverish.
+[204.7s->207.0s] Doctor: Any sweats or like chills?
+[207.0s->209.6s] Patient: No, I don't think so.
+[209.6s->210.6s] Doctor: Okay.
+[210.6s->213.6s] Doctor: Any changes in your bowel movements like constipation, diarrhea?
+[213.6s->215.2s] Patient: No.
+[215.2s->217.2s] Doctor: Okay.
+[217.2s->220.8s] Doctor: Have you traveled anywhere recently?
+[220.8s->223.8s] Patient: No, I haven't.
+[223.8s->230.1s] Doctor: Have you been feeling at all very tired, not your usual self, fatigued?
+[230.1s->237.8s] Patient: Well, the pain is making it difficult for me to do things, but I guess I'm not.
+[237.8s->240.3s] Patient: A little fatigued, maybe.
+[240.3s->241.7s] Doctor: Okay.
+[241.7s->247.2s] Doctor: Have you been having any changes in your urinary patterns?
+[247.2s->248.3s] Patient: No.
+[248.3s->249.3s] Doctor: No?
+[249.3s->250.3s] Patient: No.
+[250.3s->253.9s] Doctor: Any changes in your skin, any rashes, any yellowing of your skin?
+[253.9s->255.9s] Patient: Nothing that I've noticed.
+[255.9s->258.3s] Patient: No, I don't think so.
+[258.3s->259.8s] Doctor: Okay.
+[259.8s->261.8s] Doctor: Any changes in your urine color?
+[261.8s->262.8s] Patient: No.
+[262.8s->267.2s] Doctor: Have you noticed blood in your stools at all?
+[267.2s->271.3s] Patient: I have not, no.
+[271.3s->272.3s] Doctor: And how about your appetite?
+[272.3s->274.9s] Doctor: Has this changed at all?
+[274.9s->279.9s] Patient: Well, I guess because this pain happens, it usually happens after I eat.
+[279.9s->284.2s] Patient: I think I've been eating less than usual.
+[284.2s->285.2s] Doctor: Okay.
+[285.2s->287.2s] Patient: Just because I don't want to, you know, I don't like the pain.
+[287.2s->292.2s] Doctor: Any significant weight loss recently?
+[292.2s->294.2s] Patient: I don't think so.
+[294.2s->299.6s] Doctor: Any recent infections recently at all?
+[299.6s->303.0s] Patient: No.
+[303.0s->311.0s] Doctor: And otherwise, do you have any other medical conditions like diabetes, high blood pressure, or anything else?
+[311.0s->316.0s] Patient: I do have diabetes, but that's about it, I think.
+[316.0s->321.2s] Doctor: And do you take anything for your diabetes?
+[321.2s->323.7s] Patient: I take metformin.
+[323.7s->324.7s] Doctor: Okay.
+[324.7s->328.1s] Doctor: Do you take any other medications at all?
+[328.1s->329.9s] Patient: No.
+[329.9s->330.9s] Patient: No, I don't.
+[330.9s->331.9s] Patient: Sorry.
+[331.9s->332.9s] Doctor: No, no worries.
+[332.9s->335.9s] Doctor: Do you have any allergies to any medications?
+[335.9s->336.9s] Patient: No.
+[336.9s->337.9s] Doctor: Any environmental allergies?
+[337.9s->338.9s] Patient: No, no, I don't.
+[338.9s->340.2s] Doctor: Okay.
+[340.2s->343.4s] Doctor: Have you been hospitalized in the past?
+[343.4s->345.7s] Patient: No, haven't ever.
+[345.7s->347.7s] Patient: I've been very, I've been healthy.
+[347.7s->349.7s] Patient: No hospitalizations.
+[349.7s->352.4s] Doctor: Any past surgeries?
+[352.4s->357.0s] Patient: I got my vision teeth removed when I was a teenager.
+[357.0s->358.0s] Doctor: Okay.
+[358.0s->363.3s] Doctor: Have you been in contact with anyone who has been ill recently?
+[363.3s->370.1s] Patient: No, I don't think so.
+[370.1s->383.5s] Doctor: And in terms of your family history, has anyone had any cancers or any IBD, like Crohn's disease or ulcerative colitis?
+[383.5s->388.5s] Patient: No, not that I know of.
+[388.5s->390.5s] Doctor: Anything that runs in the family at all?
+[390.5s->397.9s] Patient: My dad had a heart attack when he was in his 60s, but that's it.
+[397.9s->398.9s] Doctor: Okay.
+[398.9s->404.3s] Doctor: And currently right now, do you work?
+[404.3s->409.8s] Patient: No, I'm lead off because of COVID.
+[409.8s->411.3s] Doctor: Okay.
+[411.3s->416.1s] Doctor: And currently, what is your home situation like?
+[416.1s->417.9s] Patient: What do you mean?
+[417.9s->422.1s] Doctor: So do you live in an apartment, a house, and do you live with anyone?
+[422.1s->425.1s] Patient: I live in an apartment.
+[425.1s->427.1s] Patient: I live alone.
+[427.1s->429.5s] Doctor: Okay.
+[429.5s->437.1s] Doctor: And in terms of your daily routine, you feel that you get enough exercise?
+[437.1s->441.1s] Doctor: Do you go outside for walks or runs, anything like that?
+[441.1s->450.0s] Patient: I usually go out for a run, especially when it's a little bit warmer, which it now is.
+[450.0s->451.0s] Patient: Yeah.
+[451.0s->454.4s] Doctor: And do you drink alcohol?
+[454.4s->455.8s] Patient: Sometimes.
+[455.8s->456.8s] Doctor: Okay.
+[456.8s->460.7s] Doctor: And how much would you say you drink in an average week?
+[460.7s->464.2s] Patient: One to two drinks a day.
+[464.2s->466.0s] Doctor: Okay.
+[466.0s->468.0s] Doctor: And what do you usually drink?
+[468.0s->470.6s] Patient: I'll just drink a glass of wine at night.
+[470.6s->473.6s] Patient: It just helps me relax.
+[473.6s->475.1s] Doctor: Okay.
+[475.1s->477.3s] Doctor: And do you smoke cigarettes?
+[477.3s->479.3s] Patient: I don't, no.
+[479.3s->484.5s] Doctor: And do you use any recreational drugs like marijuana?
+[484.5s->485.9s] Patient: No, I don't.
+[485.9s->489.1s] Doctor: All right.
+[489.1s->491.1s] Doctor: So that's all the questions I have.
+[491.1s->497.6s] Doctor: And just to clarify, does your pain come and go or is it constant?
+[497.6s->498.6s] Patient: Yeah.
+[498.6s->501.6s] Patient: So initially it would come and go.
+[501.6s->502.9s] Doctor: Okay.
+[502.9s->506.9s] Patient: But now, so for the first two hours, it would come and go.
+[506.9s->512.9s] Patient: And when I would have this pain when I was eating, it would come and go.
+[512.9s->517.9s] Patient: But over the past six hours, it's just been constant.
+[517.9s->520.0s] Doctor: Okay.
