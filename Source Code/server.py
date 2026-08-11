@@ -53,7 +53,7 @@ except ImportError as _e:
                 "CRITICAL LANGUAGE RULE: The ENTIRE report (all values, including the summary, subjective, objective, "
                 "assessment, and plan) MUST be written entirely in the SINGLE dominant language of the dialogue. "
                 "Do NOT mix languages. If the dialogue is in Bahasa Indonesia, EVERY single field value (especially "
-                "the summary) MUST be in Bahasa Indonesia. If English, use English. Do NOT translate the JSON field names/keys.\n\n"
+                "the summary) MUST be in Bahasa Indonesia. For enum values, translate them directly (e.g. for encounter_type use 'konsultasi_awal', 'tindak_lanjut', 'tinjauan_hasil', 'lainnya' and for extraction_confidence use 'tinggi', 'sedang', 'rendah'). If English, use English. Do NOT translate the JSON field names/keys.\n\n"
                 "Return ONLY valid JSON. Schema:\n"
                 "{\n"
                 '  "summary": "2-3 sentence clinical summary",\n'
