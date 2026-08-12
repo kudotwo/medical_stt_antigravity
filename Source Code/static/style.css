@@ -1,5 +1,6 @@
 :root {
-    --bg-dark: #0f172a;
+    --bg: #0f172a;
+    --bg-alt: #1e1b4b;
     --bg-panel: rgba(30, 41, 59, 0.7);
     --border-light: rgba(255, 255, 255, 0.1);
     --primary: #3b82f6;
@@ -11,6 +12,78 @@
     --success: #10b981;
 }
 
+body[data-theme='light'] {
+    --bg: #eff6ff;
+    --bg-alt: #dbeafe;
+    --bg-panel: rgba(255, 255, 255, 0.95);
+    --border-light: rgba(148, 163, 184, 0.25);
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --danger: #dc2626;
+    --danger-hover: #b91c1c;
+    --text-main: #0f172a;
+    --text-muted: #475569;
+    --success: #059669;
+}
+
+body[data-theme='light'] header,
+body[data-theme='light'] .panel,
+body[data-theme='light'] .soap-section,
+body[data-theme='light'] .language-select select,
+body[data-theme='light'] .btn.secondary,
+body[data-theme='light'] .btn-logout-header {
+    box-shadow: 0 8px 32px rgba(15, 23, 42, 0.08);
+}
+
+body[data-theme='light'] header,
+body[data-theme='light'] .panel {
+    border-color: rgba(148, 163, 184, 0.25);
+}
+
+body[data-theme='light'] .btn.secondary {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-color: rgba(148, 163, 184, 0.25);
+    color: var(--text-main);
+}
+
+body[data-theme='light'] .btn.secondary:hover {
+    background-color: rgba(255, 255, 255, 0.98);
+}
+
+body[data-theme='light'] .btn-logout-header {
+    background-color: rgba(255, 255, 255, 0.92);
+    border-color: rgba(148, 163, 184, 0.25);
+    color: var(--text-main);
+}
+
+body[data-theme='light'] .language-select select {
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--text-main);
+    border-color: rgba(148, 163, 184, 0.25);
+}
+
+body[data-theme='light'] .soap-section {
+    background: rgba(248, 250, 252, 0.95);
+}
+
+body[data-theme='light'] .soap-header {
+    background: rgba(148, 163, 184, 0.1);
+    border-bottom-color: rgba(148, 163, 184, 0.2);
+    color: var(--primary);
+}
+
+body[data-theme='light'] .soap-row {
+    border-bottom: 1px dashed rgba(148, 163, 184, 0.35);
+}
+
+body[data-theme='light'] .soap-value {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+body[data-theme='light'] .soap-value.editable {
+    background: rgba(59, 130, 246, 0.12);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -19,7 +92,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(135deg, var(--bg-dark) 0%, #1e1b4b 100%);
+    background: linear-gradient(135deg, var(--bg) 0%, var(--bg-alt) 100%);
     color: var(--text-main);
     min-height: 100vh;
     padding: 2rem;
@@ -178,6 +251,27 @@ header {
     border: 1px solid var(--border-light);
 }
 .btn.secondary:hover { background-color: rgba(255, 255, 255, 0.15); }
+
+body[data-theme='light'] .btn.secondary {
+    background-color: rgba(255, 255, 255, 0.88);
+    border-color: rgba(148, 163, 184, 0.35);
+    color: var(--text-main);
+}
+body[data-theme='light'] .btn.secondary:hover {
+    background-color: rgba(255, 255, 255, 0.98);
+}
+
+body[data-theme='light'] .btn-logout-header {
+    background: rgba(255, 255, 255, 0.92);
+    border-color: rgba(148, 163, 184, 0.25);
+    color: var(--text-main);
+}
+
+body[data-theme='light'] .language-select select {
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--text-main);
+    border-color: rgba(148, 163, 184, 0.25);
+}
 
 .language-select select {
     background: var(--bg-panel);
@@ -341,11 +435,153 @@ header {
     word-break: break-word;
 }
 
-/* Edit mode styles */
+body[data-theme='light'] .soap-section {
+    background: rgba(248, 250, 252, 0.95);
+    border-color: rgba(148, 163, 184, 0.2);
+}
+
+body[data-theme='light'] .soap-header {
+    background: rgba(148, 163, 184, 0.1);
+    border-bottom-color: rgba(148, 163, 184, 0.2);
+}
+
+body[data-theme='light'] .soap-row {
+    border-bottom: 1px dashed rgba(148, 163, 184, 0.3);
+}
+
+body[data-theme='light'] .soap-value {
+    background: rgba(255, 255, 255, 0.85);
+}
+
+body[data-theme='light'] .soap-value.editable {
+    background: rgba(59, 130, 246, 0.12);
+    outline: 1px dashed rgba(59, 130, 246, 0.4);
+    cursor: text;
+}
+
 .soap-value.editable {
     background: rgba(59, 130, 246, 0.08);
     outline: 1px dashed rgba(59, 130, 246, 0.4);
     cursor: text;
+}
+
+/* Strong explicit light mode overrides */
+body[data-theme='light'] {
+    background: linear-gradient(135deg, var(--bg) 0%, var(--bg-alt) 100%);
+    color: var(--text-main);
+}
+
+body[data-theme='light'] header,
+body[data-theme='light'] .panel,
+body[data-theme='light'] .soap-section {
+    background: rgba(255, 255, 255, 0.92);
+    border-color: rgba(148, 163, 184, 0.25);
+}
+
+body[data-theme='light'] .panel,
+body[data-theme='light'] header {
+    box-shadow: 0 8px 32px rgba(15, 23, 42, 0.08);
+}
+
+body[data-theme='light'] .btn-secondary,
+body[data-theme='light'] .btn.secondary,
+body[data-theme='light'] .btn-logout-header,
+body[data-theme='light'] .language-select select {
+    border-color: rgba(148, 163, 184, 0.25);
+}
+
+body[data-theme='light'] .btn.secondary {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--text-main);
+}
+
+body[data-theme='light'] .btn.secondary:hover,
+body[data-theme='light'] .btn-logout-header:hover {
+    background: rgba(255, 255, 255, 0.98);
+}
+
+body[data-theme='light'] .btn-logout-header {
+    background: rgba(255, 255, 255, 0.92);
+    color: var(--text-main);
+}
+
+body[data-theme='light'] .language-select select {
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--text-main);
+}
+
+body[data-theme='light'] .soap-header {
+    background: rgba(148, 163, 184, 0.1);
+    border-bottom-color: rgba(148, 163, 184, 0.2);
+    color: var(--primary);
+}
+
+body[data-theme='light'] .soap-row {
+    border-bottom: 1px dashed rgba(148, 163, 184, 0.35);
+}
+
+body[data-theme='light'] .soap-value {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+body[data-theme='light'] .status-indicator,
+body[data-theme='light'] .soap-label,
+body[data-theme='light'] .panel-header h2 {
+    color: var(--text-muted);
+}
+
+/* Explicit light mode overrides at the end to ensure selectors win */
+body[data-theme='light'] {
+    background: linear-gradient(135deg, var(--bg) 0%, var(--bg-alt) 100%);
+    color: var(--text-main);
+}
+
+body[data-theme='light'] header,
+body[data-theme='light'] .panel,
+body[data-theme='light'] .soap-section {
+    background: var(--bg-panel);
+    border-color: var(--border-light);
+}
+
+body[data-theme='light'] .soap-header {
+    background: rgba(148, 163, 184, 0.1);
+    border-bottom-color: rgba(148, 163, 184, 0.2);
+    color: var(--primary);
+}
+
+body[data-theme='light'] .panel-header,
+body[data-theme='light'] .status-indicator,
+body[data-theme='light'] .soap-label {
+    color: var(--text-muted);
+}
+
+body[data-theme='light'] .soap-row {
+    border-bottom: 1px dashed rgba(148, 163, 184, 0.35);
+}
+
+body[data-theme='light'] .btn.secondary,
+body[data-theme='light'] .btn-logout-header,
+body[data-theme='light'] .language-select select {
+    border-color: rgba(148, 163, 184, 0.25);
+}
+
+body[data-theme='light'] .btn.secondary {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+body[data-theme='light'] .btn.secondary:hover,
+body[data-theme='light'] .btn-logout-header:hover {
+    background: rgba(255, 255, 255, 0.98);
+}
+
+body[data-theme='light'] .btn-logout-header {
+    background: rgba(255, 255, 255, 0.92);
+    color: var(--text-main);
+}
+
+body[data-theme='light'] .language-select select {
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--text-main);
 }
 
 .soap-value.editable:focus {

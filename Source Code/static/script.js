@@ -12,12 +12,20 @@ window.fetch = async function(...args) {
 // ── Logout button ─────────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
     const btnLogout = document.getElementById('btn-logout');
+    const themeToggleButton = document.getElementById('theme-toggle');
+
     if (btnLogout) {
         btnLogout.addEventListener('click', async () => {
             await fetch('/api/logout', { method: 'POST', credentials: 'include' });
             window.location.href = '/login';
         });
     }
+
+    if (themeToggleButton) {
+        themeToggleButton.addEventListener('click', toggleTheme);
+    }
+
+    loadThemePreference();
 });
 
 // Check for browser support
@@ -46,6 +54,39 @@ const reportContent = document.getElementById('report-content');
 const btnDownload = document.getElementById('btn-download');
 const btnEdit = document.getElementById('btn-edit');
 const reportActions = document.getElementById('report-actions');
+
+const THEME_STORAGE_KEY = 'medical-stt-theme';
+const DEFAULT_THEME = 'dark';
+
+function updateThemeToggleLabel(theme) {
+    const themeToggle = document.getElementById('theme-toggle');
+    if (!themeToggle) return;
+    themeToggle.innerHTML = theme === 'light'
+        ? '<i class="fa-solid fa-moon"></i> Dark Mode'
+        : '<i class="fa-solid fa-sun"></i> Light Mode';
+}
+
+function applyTheme(theme) {
+    document.body.setAttribute('data-theme', theme);
+    updateThemeToggleLabel(theme);
+}
+
+function loadThemePreference() {
+    const savedTheme = window.localStorage.getItem(THEME_STORAGE_KEY);
+    const theme = savedTheme === 'light' ? 'light' : DEFAULT_THEME;
+    applyTheme(theme);
+}
+
+function saveThemePreference(theme) {
+    window.localStorage.setItem(THEME_STORAGE_KEY, theme);
+}
+
+function toggleTheme() {
+    const current = document.body.getAttribute('data-theme') === 'light' ? 'light' : DEFAULT_THEME;
+    const nextTheme = current === 'light' ? 'dark' : 'light';
+    applyTheme(nextTheme);
+    saveThemePreference(nextTheme);
+}
 
 let finalTranscript = '';
 let currentSoapData = null;
