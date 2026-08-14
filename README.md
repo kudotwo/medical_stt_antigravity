@@ -11,3 +11,6 @@ app_port: 7860
 # Medical STT Live
 
 AI-powered clinical documentation assistant. Transcribes doctor-patient consultations and generates structured SOAP reports using Gemini.
+
+#Project Account Test
+Edit and push from project account test
