@@ -1,0 +1,690 @@
+{
+  "model": "phi4-mini",
+  "invalid_fact_count": 3,
+  "validated_extraction": {
+    "patient_demographics": {
+      "age": 39,
+      "gender": "male"
+    },
+    "chief_complaint": "chest pain",
+    "symptoms": [
+      {
+        "description": "sharp",
+        "location": "left side of chest",
+        "character": null,
+        "onset": "last night and has been constant for a couple hours or eight",
+        "change_over_time": null,
+        "aggravating_factors": [
+          "laying down"
+        ],
+        "relieving_factors": []
+      }
+    ],
+    "associated_symptoms": [
+      {
+        "description": "light-headedness",
+        "location": null
+      },
+      {
+        "description": "trouble breathing"
+      },
+      {
+        "description": "racing of the heart",
+        "character": null
+      }
+    ],
+    "pertinent_negatives": [
+      {
+        "loss_of_consciousness": false
+      },
+      {
+        "fever_or_chills": null,
+        "chills": false,
+        "nausea_or_vomiting": false,
+        "abdominal_pain": false,
+        "urinary_problems": false,
+        "bowel_problems": false,
+        "cough_with_blood": false,
+        "wheezing": null
+      },
+      {
+        "changes_to_breath_sounds": null
+      }
+    ],
+    "current_medications": [],
+    "allergies": [],
+    "medical_history": [
+      {
+        "prior_conditions": [
+          "father had a heart attack at age 45",
+          "father may have cholesterol problems"
+        ]
+      },
+      {
+        "recent_hospitalizations": false,
+        "surgeries": null
+      }
+    ],
+    "additional_notes": [
+      {
+        "smoking_status": true,
+        "pack_per_day": 1
+      },
+      {
+        "cannabis_use": true,
+        "weekly_milligrams": 5
+      }
+    ],
+    "diagnoses": [],
+    "investigations_ordered": [],
+    "treatment_plan": [],
+    "referrals": [],
+    "follow_up": null
+  },
+  "soap": {
+    "diarized_segments": [
+      {
+        "id": 0,
+        "speaker": null,
+        "start": 0.0,
+        "end": 8.83,
+        "text": "brought you in today? Sure I'm just having a lot of chest pain and so I thought I should get it"
+      },
+      {
+        "id": 1,
+        "speaker": null,
+        "start": 8.83,
+        "end": 22.02,
+        "text": "checked out. Okay and before we start could you remind me of your gender and age? Sure I'm 39"
+      },
+      {
+        "id": 2,
+        "speaker": null,
+        "start": 22.5,
+        "end": 35.76,
+        "text": "I'm a male. Okay and so when did this chest pain start? It started last night but it's becoming"
+      },
+      {
+        "id": 3,
+        "speaker": null,
+        "start": 35.76,
+        "end": 47.86,
+        "text": "sharper. Okay and where is this pain located? It's located on the left side of my chest. Okay and"
+      },
+      {
+        "id": 4,
+        "speaker": null,
+        "start": 47.86,
+        "end": 58.26,
+        "text": "so how long has it been going on for than if it started last night? So I guess it would be a couple"
+      },
+      {
+        "id": 5,
+        "speaker": null,
+        "start": 58.26,
+        "end": 72.31,
+        "text": "of hours now maybe like eight. Okay has it been constant throughout that time or changing? I would"
+      },
+      {
+        "id": 6,
+        "speaker": null,
+        "start": 72.39,
+        "end": 81.9,
+        "text": "say it's been pretty constant yeah. Okay and how would you describe the pain? People will use"
+      },
+      {
+        "id": 7,
+        "speaker": null,
+        "start": 81.9,
+        "end": 91.8,
+        "text": "words sometimes like sharp, burning, achy. I'd say it's pretty sharp yeah. Sharp okay. Anything"
+      },
+      {
+        "id": 8,
+        "speaker": null,
+        "start": 91.8,
+        "end": 101.77,
+        "text": "that you have tried since last night that's made the pain better? Not laying down helps."
+      },
+      {
+        "id": 9,
+        "speaker": null,
+        "start": 103.46,
+        "end": 111.27,
+        "text": "Okay so do you find laying down makes the pain worse? Yes definitely. Okay"
+      },
+      {
+        "id": 10,
+        "speaker": null,
+        "start": 113.03,
+        "end": 122.92,
+        "text": "do you find that the pain is radiating anywhere? No. Okay and is there anything else that makes"
+      },
+      {
+        "id": 11,
+        "speaker": null,
+        "start": 122.92,
+        "end": 132.92,
+        "text": "the pain worse besides laying down? Not that I've noticed no. Okay so not like taking a deep breath"
+      },
+      {
+        "id": 12,
+        "speaker": null,
+        "start": 132.92,
+        "end": 142.54,
+        "text": "or anything like that? Maybe taking a deep breath yeah. Okay and when the pain started could you"
+      },
+      {
+        "id": 13,
+        "speaker": null,
+        "start": 144.66,
+        "end": 147.94,
+        "text": "tell me could you think of anything that you were doing at the time?"
+      },
+      {
+        "id": 14,
+        "speaker": null,
+        "start": 151.72,
+        "end": 161.4,
+        "text": "I mean I was moving some furniture around but that I've done that before. Okay so you didn't feel"
+      },
+      {
+        "id": 15,
+        "speaker": null,
+        "start": 162.04,
+        "end": 173.93,
+        "text": "like you hurt yourself when you were doing that? No. Okay and in regards to how severe the pain is"
+      },
+      {
+        "id": 16,
+        "speaker": null,
+        "start": 173.93,
+        "end": 180.65,
+        "text": "on a scale of one to ten, ten being the worst pain you've ever felt, how severe would you say"
+      },
+      {
+        "id": 17,
+        "speaker": null,
+        "start": 180.65,
+        "end": 189.3,
+        "text": "the pain is? I'd say it's like a seven or eight it's pretty bad. Okay and with the pain do you"
+      },
+      {
+        "id": 18,
+        "speaker": null,
+        "start": 189.3,
+        "end": 197.7,
+        "text": "have any other associated symptoms? I feel a little light-headed and I'm having some trouble"
+      },
+      {
+        "id": 19,
+        "speaker": null,
+        "start": 197.7,
+        "end": 215.75,
+        "text": "breathing. Okay have you had any loss of consciousness? No. Okay have you been experiencing any"
+      },
+      {
+        "id": 20,
+        "speaker": null,
+        "start": 216.39,
+        "end": 229.98,
+        "text": "like racing of the heart? A little bit yeah. Okay and have you been sweaty at all?"
+      },
+      {
+        "id": 21,
+        "speaker": null,
+        "start": 231.54,
+        "end": 239.08,
+        "text": "Just from the short just from having issues breathing. Okay have you been having issues"
+      },
+      {
+        "id": 22,
+        "speaker": null,
+        "start": 239.08,
+        "end": 252.3,
+        "text": "breathing since the pain started? Yes. Okay and recently have you had any periods of time where"
+      },
+      {
+        "id": 23,
+        "speaker": null,
+        "start": 252.3,
+        "end": 263.66,
+        "text": "you like have been immobilized or you haven't been like able to move around a lot? No. Okay"
+      },
+      {
+        "id": 24,
+        "speaker": null,
+        "start": 264.65,
+        "end": 274.63,
+        "text": "and have you been feeling sick at all any infectious symptoms? No. Okay have you had any"
+      },
+      {
+        "id": 25,
+        "speaker": null,
+        "start": 274.63,
+        "end": 288.97,
+        "text": "nausea or vomiting? No. Any fevers or chills? No. Okay how about any abdominal pain? No. Any urinary"
+      },
+      {
+        "id": 26,
+        "speaker": null,
+        "start": 288.97,
+        "end": 301.83,
+        "text": "problems? No. Or bowel problems? No. Okay have you had a cough? No. Okay you haven't brought up any"
+      },
+      {
+        "id": 27,
+        "speaker": null,
+        "start": 301.83,
+        "end": 312.06,
+        "text": "blood? No. Okay have you had a wheeze with your difficulty breathing? No not that I've heard."
+      },
+      {
+        "id": 28,
+        "speaker": null,
+        "start": 312.86,
+        "end": 319.27,
+        "text": "Okay any changes to the like breath sounds at all like any noisy breathing?"
+      },
+      {
+        "id": 29,
+        "speaker": null,
+        "start": 320.36,
+        "end": 329.08,
+        "text": "No well I guess if when I'm really having trouble breathing yeah. Okay has anything like this ever"
+      },
+      {
+        "id": 30,
+        "speaker": null,
+        "start": 329.08,
+        "end": 342.66,
+        "text": "happened to you before? No. No okay and have you have you had any night sweats? No. All right and"
+      },
+      {
+        "id": 31,
+        "speaker": null,
+        "start": 342.66,
+        "end": 351.93,
+        "text": "then how about any rashes or skin changes? No rashes but I guess like my neck seems to be a"
+      },
+      {
+        "id": 32,
+        "speaker": null,
+        "start": 351.93,
+        "end": 363.7,
+        "text": "little swollen. Okay do you have any neck pain? No. Okay have you had any like accidents like a"
+      },
+      {
+        "id": 33,
+        "speaker": null,
+        "start": 363.7,
+        "end": 375.05,
+        "text": "car accident or anything where you really jerked your neck? No. Okay any any trauma at all to the"
+      },
+      {
+        "id": 34,
+        "speaker": null,
+        "start": 375.61,
+        "end": 387.43,
+        "text": "chest or or back? No no. Okay so just in regards to past medical history do you have any prior"
+      },
+      {
+        "id": 35,
+        "speaker": null,
+        "start": 387.51,
+        "end": 399.4,
+        "text": "medical conditions? No. Okay any recent hospitalizations? No. Okay any prior surgeries?"
+      },
+      {
+        "id": 36,
+        "speaker": null,
+        "start": 400.55,
+        "end": 406.98,
+        "text": "No. Okay do you take any medications regularly are they prescribed or over the counter?"
+      },
+      {
+        "id": 37,
+        "speaker": null,
+        "start": 407.86,
+        "end": 417.85,
+        "text": "No. All right how about any allergies to medications? None. All right any immunizations"
+      },
+      {
+        "id": 38,
+        "speaker": null,
+        "start": 417.85,
+        "end": 427.05,
+        "text": "or are they up to date? They're all up to date. Excellent all right and could you tell me"
+      },
+      {
+        "id": 39,
+        "speaker": null,
+        "start": 428.09,
+        "end": 435.82,
+        "text": "a little bit about your living situation currently? Sure I live in an apartment by myself"
+      },
+      {
+        "id": 40,
+        "speaker": null,
+        "start": 440.94,
+        "end": 450.86,
+        "text": "yep that's about it. Okay and how do you support yourself financially? I'm an accountant"
+      },
+      {
+        "id": 41,
+        "speaker": null,
+        "start": 452.49,
+        "end": 463.37,
+        "text": "okay sounds like a pretty stressful job or that it can be. Do you smoke cigarettes? I do. Okay and"
+      },
+      {
+        "id": 42,
+        "speaker": null,
+        "start": 463.37,
+        "end": 472.22,
+        "text": "how much do you smoke? I smoke about a pack a day. Okay how long have you been smoking for?"
+      },
+      {
+        "id": 43,
+        "speaker": null,
+        "start": 473.18,
+        "end": 484.42,
+        "text": "For the past 10 to 15 years. Okay and do you smoke cannabis? Sometimes. How much"
+      },
+      {
+        "id": 44,
+        "speaker": null,
+        "start": 484.42,
+        "end": 492.81,
+        "text": "marijuana would you smoke per week? Per week maybe about five milligrams not that much."
+      },
+      {
+        "id": 45,
+        "speaker": null,
+        "start": 493.78,
+        "end": 500.98,
+        "text": "Okay and do you use any other recreational drugs like cocaine, crystal meth,"
+      },
+      {
+        "id": 46,
+        "speaker": null,
+        "start": 501.86,
+        "end": 514.62,
+        "text": "no opioids? No. Okay have you used IV drugs before? No. Okay and do you drink alcohol? I do."
+      },
+      {
+        "id": 47,
+        "speaker": null,
+        "start": 515.34,
+        "end": 527.96,
+        "text": "Okay how much alcohol do you drink each week? About I'd say I have like one or two drinks a day"
+      },
+      {
+        "id": 48,
+        "speaker": null,
+        "start": 527.96,
+        "end": 540.23,
+        "text": "so about 10 drinks a week. Okay and then briefly could you tell me a little bit about your"
+      },
+      {
+        "id": 49,
+        "speaker": null,
+        "start": 540.23,
+        "end": 550.65,
+        "text": "like diet and exercise? Sure I try to eat healthy for dinner at least but most of my lunches are"
+      },
+      {
+        "id": 50,
+        "speaker": null,
+        "start": 551.93,
+        "end": 558.41,
+        "text": "I eat out and then in terms of exercise I try to exercise every other day I run"
+      },
+      {
+        "id": 51,
+        "speaker": null,
+        "start": 559.35,
+        "end": 566.94,
+        "text": "for about half an hour. Okay oh that's great that you've been working on the activity and"
+      },
+      {
+        "id": 52,
+        "speaker": null,
+        "start": 566.94,
+        "end": 576.47,
+        "text": "the diets as well. So has anything like this happened in your family before? No. Okay has"
+      },
+      {
+        "id": 53,
+        "speaker": null,
+        "start": 576.47,
+        "end": 583.99,
+        "text": "anybody in the family had a heart attack before? Actually yes my father had a heart attack when"
+      },
+      {
+        "id": 54,
+        "speaker": null,
+        "start": 583.99,
+        "end": 594.92,
+        "text": "he was 45. Okay and anybody in the family have cholesterol problems? I think my father did."
+      },
+      {
+        "id": 55,
+        "speaker": null,
+        "start": 595.99,
+        "end": 604.98,
+        "text": "I see okay and how about anybody in the family have stroke? No strokes. Okay and then any"
+      },
+      {
+        "id": 56,
+        "speaker": null,
+        "start": 604.98,
+        "end": 614.2,
+        "text": "cancers in the family? No. Okay was there anything else that you wanted to"
+      },
+      {
+        "id": 57,
+        "speaker": null,
+        "start": 616.12,
+        "end": 625.46,
+        "text": "tell me about today that I on history? No I don't think so I think you asked me everything."
+      }
+    ],
+    "summary": null,
+    "encounter_type": "initial_consultation",
+    "additional_notes": [
+      {
+        "smoking_status": true,
+        "pack_per_day": 1
+      },
+      {
+        "cannabis_use": true,
+        "weekly_milligrams": 5
+      }
+    ],
+    "extraction_confidence": null,
+    "subjective": {
+      "chief_complaint": "chest pain",
+      "symptoms": [
+        {
+          "description": "sharp",
+          "location": "left side of chest",
+          "character": null,
+          "onset": "last night and has been constant for a couple hours or eight",
+          "change_over_time": null,
+          "aggravating_factors": [
+            "laying down"
+          ],
+          "relieving_factors": []
+        }
+      ],
+      "symptom_onset": "last night and has been constant for a couple hours or eight",
+      "medical_history": [
+        {
+          "prior_conditions": [
+            "father had a heart attack at age 45",
+            "father may have cholesterol problems"
+          ]
+        },
+        {
+          "recent_hospitalizations": false,
+          "surgeries": null
+        }
+      ],
+      "current_medications": [],
+      "allergies": []
+    },
+    "objective": {
+      "physical_exam_findings": [],
+      "vital_signs": null
+    },
+    "assessment": {
+      "diagnosis": [],
+      "differential_diagnosis": []
+    },
+    "plan": {
+      "prescribed_medications": [],
+      "treatment_plan": [],
+      "investigations_ordered": [],
+      "referrals": [],
+      "follow_up": null
+    }
+  },
+  "validation_log": [
+    {
+      "field": "patient_demographics.age",
+      "value": 39,
+      "supported": true
+    },
+    {
+      "field": "patient_demographics.gender",
+      "value": "male",
+      "supported": true
+    },
+    {
+      "field": "chief_complaint",
+      "value": "chest pain",
+      "supported": true
+    },
+    {
+      "field": "symptoms[0].description",
+      "value": "sharp",
+      "supported": true
+    },
+    {
+      "field": "symptoms[0].location",
+      "value": "left side of chest",
+      "supported": true
+    },
+    {
+      "field": "symptoms[0].onset",
+      "value": "last night and has been constant for a couple hours or eight",
+      "supported": true
+    },
+    {
+      "field": "symptoms[0].aggravating_factors[0]",
+      "value": "laying down",
+      "supported": true
+    },
+    {
+      "field": "associated_symptoms[0].description",
+      "value": "light-headedness",
+      "supported": true
+    },
+    {
+      "field": "associated_symptoms[1].description",
+      "value": "trouble breathing",
+      "supported": true
+    },
+    {
+      "field": "associated_symptoms[2].description",
+      "value": "racing of the heart",
+      "supported": true
+    },
+    {
+      "field": "associated_symptoms[2].character",
+      "value": "a little bit",
+      "supported": false
+    },
+    {
+      "field": "pertinent_negatives[0].loss_of_consciousness",
+      "value": false,
+      "supported": true
+    },
+    {
+      "field": "pertinent_negatives[1].fever_or_chills",
+      "value": true,
+      "supported": false
+    },
+    {
+      "field": "pertinent_negatives[1].chills",
+      "value": false,
+      "supported": true
+    },
+    {
+      "field": "pertinent_negatives[1].nausea_or_vomiting",
+      "value": false,
+      "supported": true
+    },
+    {
+      "field": "pertinent_negatives[1].abdominal_pain",
+      "value": false,
+      "supported": true
+    },
+    {
+      "field": "pertinent_negatives[1].urinary_problems",
+      "value": false,
+      "supported": true
+    },
+    {
+      "field": "pertinent_negatives[1].bowel_problems",
+      "value": false,
+      "supported": true
+    },
+    {
+      "field": "pertinent_negatives[1].cough_with_blood",
+      "value": false,
+      "supported": true
+    },
+    {
+      "field": "pertinent_negatives[2].changes_to_breath_sounds",
+      "value": true,
+      "supported": false
+    },
+    {
+      "field": "medical_history[0].prior_conditions[0]",
+      "value": "father had a heart attack at age 45",
+      "supported": true
+    },
+    {
+      "field": "medical_history[0].prior_conditions[1]",
+      "value": "father may have cholesterol problems",
+      "supported": true
+    },
+    {
+      "field": "medical_history[1].recent_hospitalizations",
+      "value": false,
+      "supported": true
+    },
+    {
+      "field": "additional_notes[0].smoking_status",
+      "value": true,
+      "supported": true
+    },
+    {
+      "field": "additional_notes[0].pack_per_day",
+      "value": 1,
+      "supported": true
+    },
+    {
+      "field": "additional_notes[1].cannabis_use",
+      "value": true,
+      "supported": true
+    },
+    {
+      "field": "additional_notes[1].weekly_milligrams",
+      "value": 5,
+      "supported": true
+    }
+  ]
+}
