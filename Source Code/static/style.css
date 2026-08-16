@@ -131,6 +131,13 @@ header {
     letter-spacing: -0.5px;
 }
 
+.header-logo {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 6px rgba(59, 130, 246, 0.5));
+}
+
 .status-indicator {
     display: flex;
     align-items: center;
